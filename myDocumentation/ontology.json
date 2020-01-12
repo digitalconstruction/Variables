@@ -1,0 +1,193 @@
+[ {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Seppo Törmä (seppo.torma@visualynk.com)"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-01-12"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Digital construction - Variables"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2019-12-20"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "dicv"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/digitalconstruction/Variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Digital construction - Variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/digitalconstruction"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#ContinuousVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#DifferentValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#DiscreteVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#RestrictedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#SameValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#Variable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasDataValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasObjectValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#isConstrainedBy"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariableDomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#isVariableDomainOf"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#isConstrainedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#isVariableDomainOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#isVariableFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#isVariableOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+} ]
