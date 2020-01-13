@@ -4,112 +4,430 @@ This section provides details for each class and property defined by Digital con
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#AllDifferent"
+            title="http://w3id.org/digitalconstruction/Variables#AllDifferent">AllDifferent</a>
+      </li>
+      <li>
+         <a href="#BinaryConstraint"
+            title="http://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
+      </li>
+      <li>
+         <a href="#Constraint"
+            title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+      </li>
+      <li>
          <a href="#ContinuousVariable"
-            title="http://w3id.org/digitalconstruction/Variables#ContinuousVariable">
-            <span>continuous variable</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#ContinuousVariable">ContinuousVariable</a>
       </li>
       <li>
          <a href="#DifferentValue"
-            title="http://w3id.org/digitalconstruction/Variables#DifferentValue">
-            <span>different value</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#DifferentValue">DifferentValue</a>
       </li>
       <li>
          <a href="#DiscreteVariable"
-            title="http://w3id.org/digitalconstruction/Variables#DiscreteVariable">
-            <span>discrete variable</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#DiscreteVariable">DiscreteVariable</a>
       </li>
       <li>
-         <a href="#RestrictedValue"
-            title="http://w3id.org/digitalconstruction/Variables#RestrictedValue">
-            <span>restricted value</span>
-         </a>
+         <a href="#LessThan"
+            title="http://w3id.org/digitalconstruction/Variables#LessThan">LessThan</a>
+      </li>
+      <li>
+         <a href="#MaxValue"
+            title="http://w3id.org/digitalconstruction/Variables#MaxValue">MaxValue</a>
+      </li>
+      <li>
+         <a href="#MinValue"
+            title="http://w3id.org/digitalconstruction/Variables#MinValue">MinValue</a>
+      </li>
+      <li>
+         <a href="#OneOfValues"
+            title="http://w3id.org/digitalconstruction/Variables#OneOfValues">OneOfValues</a>
       </li>
       <li>
          <a href="#SameValue"
-            title="http://w3id.org/digitalconstruction/Variables#SameValue">
-            <span>same value</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#SameValue">SameValue</a>
+      </li>
+      <li>
+         <a href="#UnaryConstraint"
+            title="http://w3id.org/digitalconstruction/Variables#UnaryConstraint">UnaryConstraint</a>
+      </li>
+      <li>
+         <a href="#Variable"
+            title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+      </li>
+      <li>
+         <a href="#VariableDomain"
+            title="http://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
       </li>
    </ul>
+   <div class="entity" id="AllDifferent">
+      <h3>AllDifferent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#AllDifferent</p>
+      <div class="comment">
+         <span class="markdown">A constraint that states that the involved variables have different values</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Constraint"
+               title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BinaryConstraint">
+      <h3>BinaryConstraint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#BinaryConstraint</p>
+      <div class="comment">
+         <span class="markdown">A Constraint between two Variables</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Constraint"
+               title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DifferentValue"
+               title="http://w3id.org/digitalconstruction/Variables#DifferentValue">DifferentValue</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LessThan"
+               title="http://w3id.org/digitalconstruction/Variables#LessThan">LessThan</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SameValue"
+               title="http://w3id.org/digitalconstruction/Variables#SameValue">SameValue</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Constraint">
+      <h3>Constraint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#Constraint</p>
+      <div class="comment">
+         <span class="markdown">A constraint limits the possible values of variables</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AllDifferent"
+               title="http://w3id.org/digitalconstruction/Variables#AllDifferent">AllDifferent</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BinaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#UnaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#UnaryConstraint">UnaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasVariable"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable1"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable1">hasVariable1</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable2"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable2">hasVariable2</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable3"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable3">hasVariable3</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isConstrainedBy"
+               title="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">isConstrainedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Variable"
+               title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VariableDomain"
+               title="http://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ContinuousVariable">
-      <h3>continuous variable<sup class="type-c" title="class">c</sup>
+      <h3>ContinuousVariable<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#ContinuousVariable</p>
+      <div class="comment">
+         <span class="markdown">A variable with continous domain of values</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+            <a href="#Variable"
+               title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="DifferentValue">
-      <h3>different value<sup class="type-c" title="class">c</sup>
+      <h3>DifferentValue<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#DifferentValue</p>
+      <div class="comment">
+         <span class="markdown">A BinaryConstraint that limits the values of the two variables to be different</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://w3id.org/digitalconstruction/Variables#Constraint">constraint</span>
+            <a href="#BinaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="DiscreteVariable">
-      <h3>discrete variable<sup class="type-c" title="class">c</sup>
+      <h3>DiscreteVariable<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#DiscreteVariable</p>
+      <div class="comment">
+         <span class="markdown">A variable with a discrete domain of values</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+            <a href="#Variable"
+               title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="RestrictedValue">
-      <h3>restricted value<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="LessThan">
+      <h3>LessThan<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#RestrictedValue</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#LessThan</p>
+      <div class="comment">
+         <span class="markdown">A BinaryConstraint for the value of variable1 to be less than the value of variable2</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://w3id.org/digitalconstruction/Variables#Constraint">constraint</span>
+            <a href="#BinaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaxValue">
+      <h3>MaxValue<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#MaxValue</p>
+      <div class="comment">
+         <span class="markdown">A UnaryConstraint that limits the maximum value of the variable</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#UnaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#UnaryConstraint">UnaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MinValue">
+      <h3>MinValue<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#MinValue</p>
+      <div class="comment">
+         <span class="markdown">A UnaryConstraint that limits the minimum value of the variable</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#UnaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#UnaryConstraint">UnaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OneOfValues">
+      <h3>OneOfValues<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#OneOfValues</p>
+      <div class="comment">
+         <span class="markdown">A unary constraint that limits the values of a variable to one of the enumerated values</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#UnaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#UnaryConstraint">UnaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="SameValue">
-      <h3>same value<sup class="type-c" title="class">c</sup>
+      <h3>SameValue<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#SameValue</p>
+      <div class="comment">
+         <span class="markdown">A BinaryConstraint for the two variables to have the same value</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://w3id.org/digitalconstruction/Variables#Constraint">constraint</span>
+            <a href="#BinaryConstraint"
+               title="http://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UnaryConstraint">
+      <h3>UnaryConstraint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#UnaryConstraint</p>
+      <div class="comment">
+         <span class="markdown">A Constraint on one Variable</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Constraint"
+               title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#MaxValue"
+               title="http://w3id.org/digitalconstruction/Variables#MaxValue">MaxValue</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MinValue"
+               title="http://w3id.org/digitalconstruction/Variables#MinValue">MinValue</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OneOfValues"
+               title="http://w3id.org/digitalconstruction/Variables#OneOfValues">OneOfValues</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Variable">
+      <h3>Variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#Variable</p>
+      <div class="comment">
+         <span class="markdown">A representation of a property that can assume different values, possibly limited by constraints</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ContinuousVariable"
+               title="http://w3id.org/digitalconstruction/Variables#ContinuousVariable">ContinuousVariable</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DiscreteVariable"
+               title="http://w3id.org/digitalconstruction/Variables#DiscreteVariable">DiscreteVariable</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasDataValue"
+               title="http://w3id.org/digitalconstruction/Variables#hasDataValue">hasDataValue</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasObjectValue"
+               title="http://w3id.org/digitalconstruction/Variables#hasObjectValue">hasObjectValue</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariableDomain"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariableDomain">hasVariableDomain</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isConstrainedBy"
+               title="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">isConstrainedBy</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isVariableFor"
+               title="http://w3id.org/digitalconstruction/Variables#isVariableFor">isVariableFor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isVariableOf"
+               title="http://w3id.org/digitalconstruction/Variables#isVariableOf">isVariableOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasPropertyVariable"
+               title="http://w3id.org/digitalconstruction/Variables#hasPropertyVariable">hasPropertyVariable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable1"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable1">hasVariable1</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable2"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable2">hasVariable2</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable3"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariable3">hasVariable3</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isVariableDomainOf"
+               title="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">isVariableDomainOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Constraint"
+               title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VariableDomain"
+               title="http://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VariableDomain">
+      <h3>VariableDomain<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#VariableDomain</p>
+      <div class="comment">
+         <span class="markdown">An instance/literal level representation for the set of possible values that can be given to the variable</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isVariableDomainOf"
+               title="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">isVariableDomainOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasVariableDomain"
+               title="http://w3id.org/digitalconstruction/Variables#hasVariableDomain">hasVariableDomain</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Constraint"
+               title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Variable"
+               title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -119,78 +437,65 @@ This section provides details for each class and property defined by Digital con
    <ul class="hlist">
       <li>
          <a href="#hasObjectValue"
-            title="http://w3id.org/digitalconstruction/Variables#hasObjectValue">
-            <span>has object value</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#hasObjectValue">hasObjectValue</a>
+      </li>
+      <li>
+         <a href="#hasPropertyVariable"
+            title="http://w3id.org/digitalconstruction/Variables#hasPropertyVariable">hasPropertyVariable</a>
       </li>
       <li>
          <a href="#hasVariable"
-            title="http://w3id.org/digitalconstruction/Variables#hasVariable">
-            <span>has variable</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasVariableDomain"
-            title="http://w3id.org/digitalconstruction/Variables#hasVariableDomain">
-            <span>has variable domain</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
       </li>
       <li>
          <a href="#hasVariable1"
-            title="http://w3id.org/digitalconstruction/Variables#hasVariable1">
-            <span>has variable1</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#hasVariable1">hasVariable1</a>
       </li>
       <li>
          <a href="#hasVariable2"
-            title="http://w3id.org/digitalconstruction/Variables#hasVariable2">
-            <span>has variable2</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#hasVariable2">hasVariable2</a>
       </li>
       <li>
          <a href="#hasVariable3"
-            title="http://w3id.org/digitalconstruction/Variables#hasVariable3">
-            <span>has variable3</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#hasVariable3">hasVariable3</a>
+      </li>
+      <li>
+         <a href="#hasVariableDomain"
+            title="http://w3id.org/digitalconstruction/Variables#hasVariableDomain">hasVariableDomain</a>
       </li>
       <li>
          <a href="#isConstrainedBy"
-            title="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">
-            <span>is constrained by</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">isConstrainedBy</a>
       </li>
       <li>
          <a href="#isVariableDomainOf"
-            title="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">
-            <span>is variable domain of</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">isVariableDomainOf</a>
       </li>
       <li>
          <a href="#isVariableFor"
-            title="http://w3id.org/digitalconstruction/Variables#isVariableFor">
-            <span>is variable for</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#isVariableFor">isVariableFor</a>
       </li>
       <li>
          <a href="#isVariableOf"
-            title="http://w3id.org/digitalconstruction/Variables#isVariableOf">
-            <span>is variable of</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#isVariableOf">isVariableOf</a>
       </li>
    </ul>
    <div class="entity" id="hasObjectValue">
-      <h3>has object value<sup class="type-op" title="object property">op</sup>
+      <h3>hasObjectValue<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasObjectValue</p>
+      <div class="comment">
+         <span class="markdown">An object property to associate a Variable with an object value</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -201,227 +506,333 @@ This section provides details for each class and property defined by Digital con
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasVariable">
-      <h3>has variable<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasPropertyVariable">
+      <h3>hasPropertyVariable<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariable</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasPropertyVariable</p>
+      <div class="comment">
+         <span class="markdown">A relation to associate a Variable to any object</span>
+      </div>
       <div class="description">
          <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#hasVariable1"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable1">has variable1</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable2"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable2">has variable2</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable3"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable3">has variable3</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Constraint">constraint</span>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isConstrainedBy"
-                  title="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">is constrained by</a>
+               <a href="#isVariableOf"
+                  title="http://w3id.org/digitalconstruction/Variables#isVariableOf">isVariableOf</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasVariableDomain">
-      <h3>has variable domain<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasVariable">
+      <h3>hasVariable<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariableDomain</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariable</p>
+      <div class="comment">
+         <span class="markdown">A relation to associate a Constraint with a Variable</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasVariable1"
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable1">hasVariable1</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable2"
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable2">hasVariable2</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable3"
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable3">hasVariable3</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Constraint"
+                  title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#VariableDomain">variable domain</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isVariableDomainOf"
-                  title="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">is variable domain of</a>
+               <a href="#isConstrainedBy"
+                  title="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">isConstrainedBy</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasVariable1">
-      <h3>has variable1<sup class="type-op" title="object property">op</sup>
+      <h3>hasVariable1<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariable1</p>
+      <div class="comment">
+         <span class="markdown">The first variable of a constraint</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
                <a href="#hasVariable"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">has variable</a>
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Constraint"
+                  title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasVariable2">
-      <h3>has variable2<sup class="type-op" title="object property">op</sup>
+      <h3>hasVariable2<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariable2</p>
+      <div class="comment">
+         <span class="markdown">The second variable of a constraint</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
                <a href="#hasVariable"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">has variable</a>
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Constraint"
+                  title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasVariable3">
-      <h3>has variable3<sup class="type-op" title="object property">op</sup>
+      <h3>hasVariable3<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariable3</p>
+      <div class="comment">
+         <span class="markdown">The third variable of a constraint</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
                <a href="#hasVariable"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">has variable</a>
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Constraint"
+                  title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVariableDomain">
+      <h3>hasVariableDomain<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasVariableDomain</p>
+      <div class="comment">
+         <span class="markdown">The relation that associates a Variable with a VariableDomain</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VariableDomain"
+                  title="http://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isVariableDomainOf"
+                  title="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">isVariableDomainOf</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isConstrainedBy">
-      <h3>is constrained by<sup class="type-op" title="object property">op</sup>
+      <h3>isConstrainedBy<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#isConstrainedBy</p>
+      <div class="comment">
+         <span class="markdown">The relation that associates a Variable with a Constraint</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Constraint">constraint</span>
+               <a href="#Constraint"
+                  title="http://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasVariable"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">has variable</a>
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariable">hasVariable</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isVariableDomainOf">
-      <h3>is variable domain of<sup class="type-op" title="object property">op</sup>
+      <h3>isVariableDomainOf<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#isVariableDomainOf</p>
+      <div class="comment">
+         <span class="markdown">The relation that associates a VariableDomain with a Variable</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#VariableDomain">variable domain</span>
+               <a href="#VariableDomain"
+                  title="http://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasVariableDomain"
-                  title="http://w3id.org/digitalconstruction/Variables#hasVariableDomain">has variable domain</a>
+                  title="http://w3id.org/digitalconstruction/Variables#hasVariableDomain">hasVariableDomain</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isVariableFor">
-      <h3>is variable for<sup class="type-op" title="object property">op</sup>
+      <h3>isVariableFor<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#isVariableFor</p>
+      <div class="comment">
+         <span class="markdown">The property that associates a Variable with the property whose variable it is</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isVariableOf">
-      <h3>is variable of<sup class="type-op" title="object property">op</sup>
+      <h3>isVariableOf<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#isVariableOf</p>
+      <div class="comment">
+         <span class="markdown">The relation that associates the Variable with the object to which the variable belongs to</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasPropertyVariable"
+                  title="http://w3id.org/digitalconstruction/Variables#hasPropertyVariable">hasPropertyVariable</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -431,24 +842,25 @@ This section provides details for each class and property defined by Digital con
    <ul class="hlist">
       <li>
          <a href="#hasDataValue"
-            title="http://w3id.org/digitalconstruction/Variables#hasDataValue">
-            <span>has data value</span>
-         </a>
+            title="http://w3id.org/digitalconstruction/Variables#hasDataValue">hasDataValue</a>
       </li>
    </ul>
    <div class="entity" id="hasDataValue">
-      <h3>has data value<sup class="type-dp" title="data property">dp</sup>
+      <h3>hasDataValue<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Variables#hasDataValue</p>
+      <div class="comment">
+         <span class="markdown">The data property that associates a Variable with a data value</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://w3id.org/digitalconstruction/Variables#Variable">variable</span>
+               <a href="#Variable"
+                  title="http://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

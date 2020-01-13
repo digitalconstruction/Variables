@@ -10,11 +10,11 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/digitalconstruction/Variables">
-        <dc:creator>Seppo Törmä (seppo.torma@visualynk.com)</dc:creator>
+        <dc:creator>Seppo Törmä (seppo.torma@visualynk.com) </dc:creator>
         <dc:date>2020-01-12</dc:date>
         <dc:title>Digital construction - Variables</dc:title>
         <terms:abstract>Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables.</terms:abstract>
-        <terms:created>2019-12-20</terms:created>
+        <terms:created>2020-01-12</terms:created>
         <terms:description>The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <vann:preferredNamespacePrefix>dicv</vann:preferredNamespacePrefix>
@@ -118,6 +118,21 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#hasObjectValue">
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>An object property to associate a Variable with an object value</rdfs:comment>
+        <rdfs:label>hasObjectValue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Variables#hasPropertyVariable -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#hasPropertyVariable">
+        <owl:inverseOf rdf:resource="http://w3id.org/digitalconstruction/Variables#isVariableOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>A relation to associate a Variable to any object</rdfs:comment>
+        <rdfs:label>hasPropertyVariable</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -129,6 +144,8 @@
         <owl:inverseOf rdf:resource="http://w3id.org/digitalconstruction/Variables#isConstrainedBy"/>
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
         <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>A relation to associate a Constraint with a Variable</rdfs:comment>
+        <rdfs:label>hasVariable</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -138,6 +155,10 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#hasVariable1">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/digitalconstruction/Variables#hasVariable"/>
+        <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>The first variable of a constraint</rdfs:comment>
+        <rdfs:label>hasVariable1</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -147,6 +168,10 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#hasVariable2">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/digitalconstruction/Variables#hasVariable"/>
+        <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>The second variable of a constraint</rdfs:comment>
+        <rdfs:label>hasVariable2</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -156,6 +181,10 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#hasVariable3">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/digitalconstruction/Variables#hasVariable"/>
+        <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>The third variable of a constraint</rdfs:comment>
+        <rdfs:label>hasVariable3</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -167,6 +196,8 @@
         <owl:inverseOf rdf:resource="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf"/>
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
         <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#VariableDomain"/>
+        <rdfs:comment>The relation that associates a Variable with a VariableDomain</rdfs:comment>
+        <rdfs:label>hasVariableDomain</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -177,6 +208,8 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#isConstrainedBy">
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
         <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:comment>The relation that associates a Variable with a Constraint</rdfs:comment>
+        <rdfs:label>isConstrainedBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -187,6 +220,8 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#isVariableDomainOf">
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#VariableDomain"/>
         <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>The relation that associates a VariableDomain with a Variable</rdfs:comment>
+        <rdfs:label>isVariableDomainOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -196,6 +231,9 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#isVariableFor">
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>The property that associates a Variable with the property whose variable it is</rdfs:comment>
+        <rdfs:label>isVariableFor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -206,6 +244,8 @@
     <owl:ObjectProperty rdf:about="http://w3id.org/digitalconstruction/Variables#isVariableOf">
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The relation that associates the Variable with the object to which the variable belongs to</rdfs:comment>
+        <rdfs:label>isVariableOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -227,6 +267,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/digitalconstruction/Variables#hasDataValue">
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>The data property that associates a Variable with a data value</rdfs:comment>
+        <rdfs:label>hasDataValue</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -243,10 +285,35 @@
     
 
 
+    <!-- http://w3id.org/digitalconstruction/Variables#AllDifferent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#AllDifferent">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:comment>A constraint that states that the involved variables have different values</rdfs:comment>
+        <rdfs:label>AllDifferent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Variables#BinaryConstraint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#BinaryConstraint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:comment>A Constraint between two Variables</rdfs:comment>
+        <rdfs:label>BinaryConstraint</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/digitalconstruction/Variables#Constraint -->
 
 
-    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#Constraint">
+        <rdfs:comment>A constraint limits the possible values of variables</rdfs:comment>
+        <rdfs:label>Constraint</rdfs:label>
+    </owl:Class>
     
 
 
@@ -255,6 +322,8 @@
 
     <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#ContinuousVariable">
         <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>A variable with continous domain of values</rdfs:comment>
+        <rdfs:label>ContinuousVariable</rdfs:label>
     </owl:Class>
     
 
@@ -263,7 +332,9 @@
 
 
     <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#DifferentValue">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#BinaryConstraint"/>
+        <rdfs:comment>A BinaryConstraint that limits the values of the two variables to be different</rdfs:comment>
+        <rdfs:label>DifferentValue</rdfs:label>
     </owl:Class>
     
 
@@ -273,15 +344,52 @@
 
     <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#DiscreteVariable">
         <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Variable"/>
+        <rdfs:comment>A variable with a discrete domain of values</rdfs:comment>
+        <rdfs:label>DiscreteVariable</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/digitalconstruction/Variables#RestrictedValue -->
+    <!-- http://w3id.org/digitalconstruction/Variables#LessThan -->
 
 
-    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#RestrictedValue">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#LessThan">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#BinaryConstraint"/>
+        <rdfs:comment>A BinaryConstraint for the value of variable1 to be less than the value of variable2</rdfs:comment>
+        <rdfs:label>LessThan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Variables#MaxValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#MaxValue">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#UnaryConstraint"/>
+        <rdfs:comment>A UnaryConstraint that limits the maximum value of the variable</rdfs:comment>
+        <rdfs:label>MaxValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Variables#MinValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#MinValue">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#UnaryConstraint"/>
+        <rdfs:comment>A UnaryConstraint that limits the minimum value of the variable</rdfs:comment>
+        <rdfs:label>MinValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Variables#OneOfValues -->
+
+
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#OneOfValues">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#UnaryConstraint"/>
+        <rdfs:comment>A unary constraint that limits the values of a variable to one of the enumerated values</rdfs:comment>
+        <rdfs:label>OneOfValues</rdfs:label>
     </owl:Class>
     
 
@@ -290,7 +398,20 @@
 
 
     <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#SameValue">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#BinaryConstraint"/>
+        <rdfs:comment>A BinaryConstraint for the two variables to have the same value</rdfs:comment>
+        <rdfs:label>SameValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Variables#UnaryConstraint -->
+
+
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#UnaryConstraint">
         <rdfs:subClassOf rdf:resource="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:comment>A Constraint on one Variable</rdfs:comment>
+        <rdfs:label>UnaryConstraint</rdfs:label>
     </owl:Class>
     
 
@@ -298,14 +419,56 @@
     <!-- http://w3id.org/digitalconstruction/Variables#Variable -->
 
 
-    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#Variable"/>
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#Variable">
+        <rdfs:comment>A representation of a property that can assume different values, possibly limited by constraints</rdfs:comment>
+        <rdfs:label>Variable</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://w3id.org/digitalconstruction/Variables#VariableDomain -->
 
 
-    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#VariableDomain"/>
+    <owl:Class rdf:about="http://w3id.org/digitalconstruction/Variables#VariableDomain">
+        <rdfs:comment>An instance/literal level representation for the set of possible values that can be given to the variable</rdfs:comment>
+        <rdfs:label>VariableDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#Constraint"/>
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#Variable"/>
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#VariableDomain"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#hasObjectValue"/>
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#hasPropertyVariable"/>
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#hasVariable"/>
+            <rdf:Description rdf:about="http://w3id.org/digitalconstruction/Variables#hasVariableDomain"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
