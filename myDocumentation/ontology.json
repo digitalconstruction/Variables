@@ -3,6 +3,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
+      "@id" : "http://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint"
+    }, {
+      "@id" : "http://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint"
+    }, {
+      "@id" : "http://w3id.org/digitalconstruction/Variables#NegatedConstraint"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
       "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
     }, {
       "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
@@ -11,7 +23,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -52,54 +64,6 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Variables",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Seppo Törmä (seppo.torma@visualynk.com) "
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2020-01-12"
-  } ],
-  "http://purl.org/dc/elements/1.1/title" : [ {
-    "@value" : "Digital construction - Variables"
-  } ],
-  "http://purl.org/dc/terms/abstract" : [ {
-    "@value" : "Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables."
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2020-01-12"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@value" : "The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario."
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "dicv"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://w3id.org/digitalconstruction/Variables"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Digital construction - Variables"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://w3id.org/digitalconstruction"
-  } ]
-}, {
-  "@id" : "http://w3id.org/digitalconstruction/Variables#AllDifferent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A constraint that states that the involved variables have different values"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "AllDifferent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
-  } ]
-}, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#BinaryConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -109,7 +73,31 @@
     "@value" : "BinaryConstraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#ElementaryConstraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#CompositeConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CompositeConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#ElementaryConstraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that is a conjuction (logical and) of the constituent constraints"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ConjunctiveConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#CompositeConstraint"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint",
@@ -121,40 +109,58 @@
     "@value" : "Constraint"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Variables#ContinuousVariable",
+  "@id" : "http://w3id.org/digitalconstruction/Variables#DifferentValues",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A variable with continous domain of values"
+    "@value" : "A constraint that states that the involved variables have different values"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ContinuousVariable"
+    "@value" : "DifferentValues"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+    "@id" : "http://w3id.org/digitalconstruction/Variables#ElementaryConstraint"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Variables#DifferentValue",
+  "@id" : "http://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A BinaryConstraint that limits the values of the two variables to be different"
+    "@value" : "Constraint that is a disjuction (logical ord) of the constituent constraints"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DifferentValue"
+    "@value" : "DisjunctiveConstraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Variables#BinaryConstraint"
+    "@id" : "http://w3id.org/digitalconstruction/Variables#CompositeConstraint"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Variables#DiscreteVariable",
+  "@id" : "http://w3id.org/digitalconstruction/Variables#ElementaryConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#EnumeratedDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A variable with a discrete domain of values"
+    "@value" : "A domain of enumerated values. Should be used with object properties"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DiscreteVariable"
+    "@value" : "EnumeratedDomain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
+    "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#ExactValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#UnaryConstraint"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#IntervalDomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#OrderedDomain"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#LessThan",
@@ -193,6 +199,15 @@
     "@id" : "http://w3id.org/digitalconstruction/Variables#UnaryConstraint"
   } ]
 }, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#NegatedConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A composite constraint that is negation of its constituent constraints (conjunctively, if there are multiple)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#CompositeConstraint"
+  } ]
+}, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#OneOfValues",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -205,16 +220,31 @@
     "@id" : "http://w3id.org/digitalconstruction/Variables#UnaryConstraint"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Variables#SameValue",
+  "@id" : "http://w3id.org/digitalconstruction/Variables#OrderedDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A BinaryConstraint for the two variables to have the same value"
+    "@value" : "A domain of ordered values. Should be used with DataProperties that have ordered domains (such as numbers)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SameValue"
+    "@value" : "OrderedDomain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Variables#BinaryConstraint"
+    "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#SameValues",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A constraint for all involved variables to have same values"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SameValues"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#ElementaryConstraint"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#UnaryConstraint",
@@ -226,7 +256,7 @@
     "@value" : "UnaryConstraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+    "@id" : "http://w3id.org/digitalconstruction/Variables#ElementaryConstraint"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#Variable",
@@ -247,16 +277,42 @@
     "@value" : "VariableDomain"
   } ]
 }, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasConstituentConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#CompositeConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasConstituentConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#hasDataValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The data property that associates a Variable with a data value"
+  }, {
+    "@value" : "The representation of a changing or as-of-yet undefined value of a property, possibly subject to constraints. Any object and RDF property can be associated with a variable."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/digitalconstruction/Variables#Variable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasDataValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasLowerBound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#IntervalDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasLowerBound"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#hasObjectValue",
@@ -290,6 +346,24 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://w3id.org/digitalconstruction/Variables#isVariableOf"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasUpperBound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#IntervalDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasUpperBound"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Variables#hasValueType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Variables#VariableDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasValueType"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Variables#hasVariable",
@@ -444,4 +518,40 @@
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Seppo Törmä (seppo.torma@visualynk.com)"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-01-12"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Digital construction - Variables"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2020-01-12"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "dicv"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/digitalconstruction/Variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Digital construction - Variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/digitalconstruction"
+  } ]
 } ]
