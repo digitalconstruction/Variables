@@ -4,14 +4,20 @@ This section provides details for each class and property defined by Digital con
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#ApplicabilityState"
+            title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
+      </li>
+      <li>
          <a href="#ArithmeticConstraint"
-            title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">
-            <span>arithmetic constraint</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">ArithmeticConstraint</a>
       </li>
       <li>
          <a href="#BinaryConstraint"
             title="https://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
+      </li>
+      <li>
+         <a href="#Comparison"
+            title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
       </li>
       <li>
          <a href="#CompositeConstraint"
@@ -35,15 +41,11 @@ This section provides details for each class and property defined by Digital con
       </li>
       <li>
          <a href="#DistanceConstraint"
-            title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">
-            <span>distance constraint</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">DistanceConstraint</a>
       </li>
       <li>
          <a href="#ElementaryConstraint"
-            title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">
-            <span>elementary constraint</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
       </li>
       <li>
          <a href="#EnumeratedDomain"
@@ -51,37 +53,27 @@ This section provides details for each class and property defined by Digital con
       </li>
       <li>
          <a href="#FixedDistance"
-            title="https://w3id.org/digitalconstruction/Variables#FixedDistance">
-            <span>fixed distance</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#FixedDistance">FixedDistance</a>
       </li>
       <li>
          <a href="#FixedValue"
-            title="https://w3id.org/digitalconstruction/Variables#FixedValue">
-            <span>fixed value</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#FixedValue">FixedValue</a>
       </li>
       <li>
          <a href="#IntervalDomain"
-            title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">
-            <span>interval domain</span>
-         </a>
-      </li>
-      <li>
-         <a href="#LessOrEqualThan"
-            title="https://w3id.org/digitalconstruction/Variables#LessOrEqualThan">
-            <span>less or equal than</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">IntervalDomain</a>
       </li>
       <li>
          <a href="#LessThan"
             title="https://w3id.org/digitalconstruction/Variables#LessThan">LessThan</a>
       </li>
       <li>
+         <a href="#LessThanOrEqual"
+            title="https://w3id.org/digitalconstruction/Variables#LessThanOrEqual">LessThanOrEqual</a>
+      </li>
+      <li>
          <a href="#MaxDistance"
-            title="https://w3id.org/digitalconstruction/Variables#MaxDistance">
-            <span>max distance</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#MaxDistance">MaxDistance</a>
       </li>
       <li>
          <a href="#MaxValue"
@@ -89,9 +81,7 @@ This section provides details for each class and property defined by Digital con
       </li>
       <li>
          <a href="#MinDistance"
-            title="https://w3id.org/digitalconstruction/Variables#MinDistance">
-            <span>min distance</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#MinDistance">MinDistance</a>
       </li>
       <li>
          <a href="#MinValue"
@@ -99,13 +89,15 @@ This section provides details for each class and property defined by Digital con
       </li>
       <li>
          <a href="#NegatedConstraint"
-            title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">
-            <span>negated constraint</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">NegatedConstraint</a>
       </li>
       <li>
          <a href="#OneOfValues"
             title="https://w3id.org/digitalconstruction/Variables#OneOfValues">OneOfValues</a>
+      </li>
+      <li>
+         <a href="#Operator"
+            title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
       </li>
       <li>
          <a href="#OrderedDomain"
@@ -117,9 +109,7 @@ This section provides details for each class and property defined by Digital con
       </li>
       <li>
          <a href="#TernaryConstraint"
-            title="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">
-            <span>ternary constraint</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">TernaryConstraint</a>
       </li>
       <li>
          <a href="#UnaryConstraint"
@@ -134,8 +124,41 @@ This section provides details for each class and property defined by Digital con
             title="https://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
       </li>
    </ul>
+   <div class="entity" id="ApplicabilityState">
+      <h3>ApplicabilityState<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#ApplicabilityState</p>
+      <div class="comment">
+         <span class="markdown">Represents the states in which a constraint is declared to be applicable</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#applicableOnly"
+               title="https://w3id.org/digitalconstruction/Variables#applicableOnly">applicable only</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Constraint"
+               title="https://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Variable"
+               title="https://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VariableDomain"
+               title="https://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ArithmeticConstraint">
-      <h3>arithmetic constraint<sup class="type-c" title="class">c</sup>
+      <h3>ArithmeticConstraint<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -148,7 +171,7 @@ This section provides details for each class and property defined by Digital con
          <dt>has super-classes</dt>
          <dd>
             <a href="#TernaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">ternary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">TernaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -175,17 +198,58 @@ This section provides details for each class and property defined by Digital con
          <dt>has super-classes</dt>
          <dd>
             <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#LessThan"
+            <a href="#DistanceConstraint"
+               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">DistanceConstraint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LessThan"
                title="https://w3id.org/digitalconstruction/Variables#LessThan">LessThan</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#DistanceConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">distance constraint</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#LessOrEqualThan"
-               title="https://w3id.org/digitalconstruction/Variables#LessOrEqualThan">less or equal than</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LessThanOrEqual"
+               title="https://w3id.org/digitalconstruction/Variables#LessThanOrEqual">LessThanOrEqual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Comparison">
+      <h3>Comparison<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#Comparison</p>
+      <div class="comment">
+         <span class="markdown">Comparison operator such as equal or less than.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasComparison"
+               title="https://w3id.org/digitalconstruction/Variables#hasComparison">has comparison</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Equal"
+               title="https://w3id.org/digitalconstruction/Variables#Equal">equal</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Less"
+               title="https://w3id.org/digitalconstruction/Variables#Less">less</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#LessOrEqual"
+               title="https://w3id.org/digitalconstruction/Variables#LessOrEqual">less or equal</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#NotEqual"
+               title="https://w3id.org/digitalconstruction/Variables#NotEqual">not equal</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ApplicabilityState"
+               title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Constraint"
+               title="https://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -197,6 +261,9 @@ This section provides details for each class and property defined by Digital con
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#CompositeConstraint</p>
+      <div class="comment">
+         <span class="markdown">Combination of other constraints, either elementary or composite ones. Examples are conjunctive composition (and) or negated composition (not).</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -211,7 +278,7 @@ This section provides details for each class and property defined by Digital con
             <sup class="type-c" title="class">c</sup>, <a href="#DisjunctiveConstraint"
                title="https://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint">DisjunctiveConstraint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NegatedConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">negated constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">NegatedConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -223,7 +290,7 @@ This section provides details for each class and property defined by Digital con
          <dt>is disjoint with</dt>
          <dd>
             <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -250,7 +317,7 @@ This section provides details for each class and property defined by Digital con
             <a href="#DisjunctiveConstraint"
                title="https://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint">DisjunctiveConstraint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NegatedConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">negated constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">NegatedConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -271,7 +338,7 @@ This section provides details for each class and property defined by Digital con
             <a href="#CompositeConstraint"
                title="https://w3id.org/digitalconstruction/Variables#CompositeConstraint">CompositeConstraint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -298,12 +365,12 @@ This section provides details for each class and property defined by Digital con
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">applicability state</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Comparison">comparison</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Operator">operator</span>
+            <a href="#ApplicabilityState"
+               title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Variable"
                title="https://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#VariableDomain"
@@ -326,7 +393,7 @@ This section provides details for each class and property defined by Digital con
          <dt>has super-classes</dt>
          <dd>
             <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -353,18 +420,21 @@ This section provides details for each class and property defined by Digital con
             <a href="#ConjunctiveConstraint"
                title="https://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint">ConjunctiveConstraint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NegatedConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">negated constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">NegatedConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="DistanceConstraint">
-      <h3>distance constraint<sup class="type-c" title="class">c</sup>
+      <h3>DistanceConstraint<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#DistanceConstraint</p>
+      <div class="comment">
+         <span class="markdown">Constraint that limits the distance between variable1 and variable2.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -375,22 +445,25 @@ This section provides details for each class and property defined by Digital con
          <dt>has sub-classes</dt>
          <dd>
             <a href="#FixedDistance"
-               title="https://w3id.org/digitalconstruction/Variables#FixedDistance">fixed distance</a>
+               title="https://w3id.org/digitalconstruction/Variables#FixedDistance">FixedDistance</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MaxDistance"
-               title="https://w3id.org/digitalconstruction/Variables#MaxDistance">max distance</a>
+               title="https://w3id.org/digitalconstruction/Variables#MaxDistance">MaxDistance</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MinDistance"
-               title="https://w3id.org/digitalconstruction/Variables#MinDistance">min distance</a>
+               title="https://w3id.org/digitalconstruction/Variables#MinDistance">MinDistance</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="ElementaryConstraint">
-      <h3>elementary constraint<sup class="type-c" title="class">c</sup>
+      <h3>ElementaryConstraint<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#ElementaryConstraint</p>
+      <div class="comment">
+         <span class="markdown">Constraint that does not have other more simple constraints as its parts.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -406,10 +479,10 @@ This section provides details for each class and property defined by Digital con
                title="https://w3id.org/digitalconstruction/Variables#DifferentValues">DifferentValues</a>
             <sup class="type-c" title="class">c</sup>, <a href="#SameValues"
                title="https://w3id.org/digitalconstruction/Variables#SameValues">SameValues</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TernaryConstraint"
+               title="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">TernaryConstraint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#UnaryConstraint"
                title="https://w3id.org/digitalconstruction/Variables#UnaryConstraint">UnaryConstraint</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#TernaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">ternary constraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -440,28 +513,34 @@ This section provides details for each class and property defined by Digital con
       </dl>
    </div>
    <div class="entity" id="FixedDistance">
-      <h3>fixed distance<sup class="type-c" title="class">c</sup>
+      <h3>FixedDistance<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#FixedDistance</p>
+      <div class="comment">
+         <span class="markdown">Constraint that specifies that the distance of variable1 and variable2 is a fixed value.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#DistanceConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">distance constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">DistanceConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="FixedValue">
-      <h3>fixed value<sup class="type-c" title="class">c</sup>
+      <h3>FixedValue<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#FixedValue</p>
+      <div class="comment">
+         <span class="markdown">Constraint that limits the value of the variable to be a fixed constant.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -472,12 +551,15 @@ This section provides details for each class and property defined by Digital con
       </dl>
    </div>
    <div class="entity" id="IntervalDomain">
-      <h3>interval domain<sup class="type-c" title="class">c</sup>
+      <h3>IntervalDomain<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#IntervalDomain</p>
+      <div class="comment">
+         <span class="markdown">Ordered domain that is represented with the minimum and maximum limits. Useful for example in temporal reasoning.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -492,22 +574,6 @@ This section provides details for each class and property defined by Digital con
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasUpperBound"
                title="https://w3id.org/digitalconstruction/Variables#hasUpperBound">has upper bound</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="LessOrEqualThan">
-      <h3>less or equal than<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#LessOrEqualThan</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#BinaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -530,18 +596,40 @@ This section provides details for each class and property defined by Digital con
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LessThanOrEqual">
+      <h3>LessThanOrEqual<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#LessThanOrEqual</p>
+      <div class="comment">
+         <span class="markdown">Constraint representing that variable1 is less than variable2</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#BinaryConstraint"
+               title="https://w3id.org/digitalconstruction/Variables#BinaryConstraint">BinaryConstraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="MaxDistance">
-      <h3>max distance<sup class="type-c" title="class">c</sup>
+      <h3>MaxDistance<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#MaxDistance</p>
+      <div class="comment">
+         <span class="markdown">Constraint that limits the distance of variable1 and variable2 to be less than or equal to fixed maximum value.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#DistanceConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">distance constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">DistanceConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -566,17 +654,20 @@ This section provides details for each class and property defined by Digital con
       </dl>
    </div>
    <div class="entity" id="MinDistance">
-      <h3>min distance<sup class="type-c" title="class">c</sup>
+      <h3>MinDistance<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#MinDistance</p>
+      <div class="comment">
+         <span class="markdown">Constraint that limits the distance of variable1 and variable2 to be greater than or equal to fixed minimum value.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#DistanceConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">distance constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">DistanceConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -601,7 +692,7 @@ This section provides details for each class and property defined by Digital con
       </dl>
    </div>
    <div class="entity" id="NegatedConstraint">
-      <h3>negated constraint<sup class="type-c" title="class">c</sup>
+      <h3>NegatedConstraint<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -646,6 +737,47 @@ This section provides details for each class and property defined by Digital con
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Operator">
+      <h3>Operator<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#Operator</p>
+      <div class="comment">
+         <span class="markdown">Artihmetic operators, such as plus, minus, times and divide.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasOperator"
+               title="https://w3id.org/digitalconstruction/Variables#hasOperator">has operator</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Divide"
+               title="https://w3id.org/digitalconstruction/Variables#Divide">divide</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Minus"
+               title="https://w3id.org/digitalconstruction/Variables#Minus">minus</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Plus"
+               title="https://w3id.org/digitalconstruction/Variables#Plus">plus</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Times"
+               title="https://w3id.org/digitalconstruction/Variables#Times">times</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ApplicabilityState"
+               title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Constraint"
+               title="https://w3id.org/digitalconstruction/Variables#Constraint">Constraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="OrderedDomain">
       <h3>OrderedDomain<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -666,7 +798,7 @@ This section provides details for each class and property defined by Digital con
          <dt>has sub-classes</dt>
          <dd>
             <a href="#IntervalDomain"
-               title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">interval domain</a>
+               title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">IntervalDomain</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -685,29 +817,32 @@ This section provides details for each class and property defined by Digital con
          <dt>has super-classes</dt>
          <dd>
             <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="TernaryConstraint">
-      <h3>ternary constraint<sup class="type-c" title="class">c</sup>
+      <h3>TernaryConstraint<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Variables#TernaryConstraint</p>
+      <div class="comment">
+         <span class="markdown">Constraint between three variables.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#ArithmeticConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">arithmetic constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">ArithmeticConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -726,19 +861,19 @@ This section provides details for each class and property defined by Digital con
          <dt>has super-classes</dt>
          <dd>
             <a href="#ElementaryConstraint"
-               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">elementary constraint</a>
+               title="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">ElementaryConstraint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#MaxValue"
+            <a href="#FixedValue"
+               title="https://w3id.org/digitalconstruction/Variables#FixedValue">FixedValue</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MaxValue"
                title="https://w3id.org/digitalconstruction/Variables#MaxValue">MaxValue</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MinValue"
                title="https://w3id.org/digitalconstruction/Variables#MinValue">MinValue</a>
             <sup class="type-c" title="class">c</sup>, <a href="#OneOfValues"
                title="https://w3id.org/digitalconstruction/Variables#OneOfValues">OneOfValues</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FixedValue"
-               title="https://w3id.org/digitalconstruction/Variables#FixedValue">fixed value</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -784,8 +919,8 @@ This section provides details for each class and property defined by Digital con
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">applicability state</span>
+            <a href="#ApplicabilityState"
+               title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
             <sup class="type-c" title="class">c</sup>, <a href="#VariableDomain"
                title="https://w3id.org/digitalconstruction/Variables#VariableDomain">VariableDomain</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Constraint"
@@ -831,8 +966,8 @@ This section provides details for each class and property defined by Digital con
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">applicability state</span>
+            <a href="#ApplicabilityState"
+               title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Variable"
                title="https://w3id.org/digitalconstruction/Variables#Variable">Variable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Constraint"
@@ -930,8 +1065,8 @@ This section provides details for each class and property defined by Digital con
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">applicability state</span>
+               <a href="#ApplicabilityState"
+                  title="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">ApplicabilityState</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -949,13 +1084,13 @@ This section provides details for each class and property defined by Digital con
             <dt>has domain</dt>
             <dd>
                <a href="#ArithmeticConstraint"
-                  title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">arithmetic constraint</a>
+                  title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">ArithmeticConstraint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/digitalconstruction/Variables#Comparison">comparison</span>
+               <a href="#Comparison"
+                  title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -973,13 +1108,13 @@ This section provides details for each class and property defined by Digital con
             <dt>has domain</dt>
             <dd>
                <a href="#ArithmeticConstraint"
-                  title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">arithmetic constraint</a>
+                  title="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">ArithmeticConstraint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/digitalconstruction/Variables#Operator">operator</span>
+               <a href="#Operator"
+                  title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1386,7 +1521,7 @@ This section provides details for each class and property defined by Digital con
             <dt>has domain</dt>
             <dd>
                <a href="#IntervalDomain"
-                  title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">interval domain</a>
+                  title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">IntervalDomain</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1404,7 +1539,7 @@ This section provides details for each class and property defined by Digital con
             <dt>has domain</dt>
             <dd>
                <a href="#IntervalDomain"
-                  title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">interval domain</a>
+                  title="https://w3id.org/digitalconstruction/Variables#IntervalDomain">IntervalDomain</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1472,8 +1607,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Operator">operator</span>
+            <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1488,8 +1623,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Comparison">comparison</span>
+            <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1504,8 +1639,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Comparison">comparison</span>
+            <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1520,8 +1655,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Comparison">comparison</span>
+            <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1536,8 +1671,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Operator">operator</span>
+            <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1552,8 +1687,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Comparison">comparison</span>
+            <a href="#Comparison"
+               title="https://w3id.org/digitalconstruction/Variables#Comparison">Comparison</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1568,8 +1703,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Operator">operator</span>
+            <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1584,8 +1719,8 @@ This section provides details for each class and property defined by Digital con
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Variables#Operator">operator</span>
+            <a href="#Operator"
+               title="https://w3id.org/digitalconstruction/Variables#Operator">Operator</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

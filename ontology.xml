@@ -10,7 +10,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/digitalconstruction/Variables">
-        <dc:creator>Seppo Törmä (seppo.torma@visualynk.com)</dc:creator>
+        <dc:creator>Seppo Törmä</dc:creator>
         <dc:date>2020-01-12</dc:date>
         <dc:title>Digital construction - Variables</dc:title>
         <terms:abstract>Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables.</terms:abstract>
@@ -341,7 +341,10 @@
     <!-- https://w3id.org/digitalconstruction/Variables#ApplicabilityState -->
 
 
-    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#ApplicabilityState"/>
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#ApplicabilityState">
+        <rdfs:comment>Represents the states in which a constraint is declared to be applicable</rdfs:comment>
+        <rdfs:label>ApplicabilityState</rdfs:label>
+    </owl:Class>
     
 
 
@@ -351,6 +354,7 @@
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#TernaryConstraint"/>
         <rdfs:comment>Artihmetic constraints have an operator (hasOperator) and are of the form: variable1 operator variable2 = variable3. For example, startTime + duration = endTime.</rdfs:comment>
+        <rdfs:label>ArithmeticConstraint</rdfs:label>
     </owl:Class>
     
 
@@ -369,7 +373,10 @@
     <!-- https://w3id.org/digitalconstruction/Variables#Comparison -->
 
 
-    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#Comparison"/>
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#Comparison">
+        <rdfs:comment>Comparison operator such as equal or less than.</rdfs:comment>
+        <rdfs:label>Comparison</rdfs:label>
+    </owl:Class>
     
 
 
@@ -379,6 +386,7 @@
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#CompositeConstraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#Constraint"/>
         <owl:disjointWith rdf:resource="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint"/>
+        <rdfs:comment>Combination of other constraints, either elementary or composite ones. Examples are conjunctive composition (and) or negated composition (not).</rdfs:comment>
         <rdfs:label>CompositeConstraint</rdfs:label>
     </owl:Class>
     
@@ -432,6 +440,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#DistanceConstraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#BinaryConstraint"/>
+        <rdfs:comment>Constraint that limits the distance between variable1 and variable2.</rdfs:comment>
+        <rdfs:label>DistanceConstraint</rdfs:label>
     </owl:Class>
     
 
@@ -441,6 +451,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#Constraint"/>
+        <rdfs:comment>Constraint that does not have other more simple constraints as its parts.</rdfs:comment>
+        <rdfs:label>ElementaryConstraint</rdfs:label>
     </owl:Class>
     
 
@@ -461,6 +473,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#FixedDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#DistanceConstraint"/>
+        <rdfs:comment>Constraint that specifies that the distance of variable1 and variable2 is a fixed value.</rdfs:comment>
+        <rdfs:label>FixedDistance</rdfs:label>
     </owl:Class>
     
 
@@ -470,6 +484,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#FixedValue">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#UnaryConstraint"/>
+        <rdfs:comment>Constraint that limits the value of the variable to be a fixed constant.</rdfs:comment>
+        <rdfs:label>FixedValue</rdfs:label>
     </owl:Class>
     
 
@@ -479,15 +495,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#IntervalDomain">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#OrderedDomain"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/digitalconstruction/Variables#LessOrEqualThan -->
-
-
-    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#LessOrEqualThan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#BinaryConstraint"/>
+        <rdfs:comment>Ordered domain that is represented with the minimum and maximum limits. Useful for example in temporal reasoning.</rdfs:comment>
+        <rdfs:label>IntervalDomain</rdfs:label>
     </owl:Class>
     
 
@@ -503,11 +512,24 @@
     
 
 
+    <!-- https://w3id.org/digitalconstruction/Variables#LessThanOrEqual -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#LessThanOrEqual">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#BinaryConstraint"/>
+        <rdfs:comment>Constraint representing that variable1 is less than variable2</rdfs:comment>
+        <rdfs:label>LessThanOrEqual</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/digitalconstruction/Variables#MaxDistance -->
 
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#MaxDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#DistanceConstraint"/>
+        <rdfs:comment>Constraint that limits the distance of variable1 and variable2 to be less than or equal to fixed maximum value.</rdfs:comment>
+        <rdfs:label>MaxDistance</rdfs:label>
     </owl:Class>
     
 
@@ -528,6 +550,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#MinDistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#DistanceConstraint"/>
+        <rdfs:comment>Constraint that limits the distance of variable1 and variable2 to be greater than or equal to fixed minimum value.</rdfs:comment>
+        <rdfs:label>MinDistance</rdfs:label>
     </owl:Class>
     
 
@@ -549,6 +573,7 @@
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#NegatedConstraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#CompositeConstraint"/>
         <rdfs:comment>A composite constraint that is negation of its constituent constraints (conjunctively, if there are multiple)</rdfs:comment>
+        <rdfs:label>NegatedConstraint</rdfs:label>
     </owl:Class>
     
 
@@ -567,7 +592,10 @@
     <!-- https://w3id.org/digitalconstruction/Variables#Operator -->
 
 
-    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#Operator"/>
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#Operator">
+        <rdfs:comment>Artihmetic operators, such as plus, minus, times and divide.</rdfs:comment>
+        <rdfs:label>Operator</rdfs:label>
+    </owl:Class>
     
 
 
@@ -598,6 +626,8 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Variables#TernaryConstraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/Variables#ElementaryConstraint"/>
+        <rdfs:comment>Constraint between three variables.</rdfs:comment>
+        <rdfs:label>TernaryConstraint</rdfs:label>
     </owl:Class>
     
 

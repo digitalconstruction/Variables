@@ -1,5 +1,5 @@
 <https://w3id.org/digitalconstruction/Variables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä (seppo.torma@visualynk.com)" .
+<https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/date> "2020-01-12" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/title> "Digital construction - Variables" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/terms/abstract> "Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables." .
@@ -188,11 +188,14 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#ApplicabilityState
 <https://w3id.org/digitalconstruction/Variables#ApplicabilityState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#ApplicabilityState> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the states in which a constraint is declared to be applicable" .
+<https://w3id.org/digitalconstruction/Variables#ApplicabilityState> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicabilityState" .
 # 
 # https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint
 <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#TernaryConstraint> .
 <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Artihmetic constraints have an operator (hasOperator) and are of the form: variable1 operator variable2 = variable3. For example, startTime + duration = endTime." .
+<https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "ArithmeticConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#BinaryConstraint
 <https://w3id.org/digitalconstruction/Variables#BinaryConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -202,11 +205,14 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#Comparison
 <https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/2000/01/rdf-schema#comment> "Comparison operator such as equal or less than." .
+<https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/2000/01/rdf-schema#label> "Comparison" .
 # 
 # https://w3id.org/digitalconstruction/Variables#CompositeConstraint
 <https://w3id.org/digitalconstruction/Variables#CompositeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#CompositeConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#Constraint> .
 <https://w3id.org/digitalconstruction/Variables#CompositeConstraint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#CompositeConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of other constraints, either elementary or composite ones. Examples are conjunctive composition (and) or negated composition (not)." .
 <https://w3id.org/digitalconstruction/Variables#CompositeConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "CompositeConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint
@@ -235,10 +241,14 @@
 # https://w3id.org/digitalconstruction/Variables#DistanceConstraint
 <https://w3id.org/digitalconstruction/Variables#DistanceConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#DistanceConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#BinaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#DistanceConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that limits the distance between variable1 and variable2." .
+<https://w3id.org/digitalconstruction/Variables#DistanceConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "DistanceConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#ElementaryConstraint
 <https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#Constraint> .
+<https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that does not have other more simple constraints as its parts." .
+<https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "ElementaryConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#EnumeratedDomain
 <https://w3id.org/digitalconstruction/Variables#EnumeratedDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -249,18 +259,20 @@
 # https://w3id.org/digitalconstruction/Variables#FixedDistance
 <https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#DistanceConstraint> .
+<https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that specifies that the distance of variable1 and variable2 is a fixed value." .
+<https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/2000/01/rdf-schema#label> "FixedDistance" .
 # 
 # https://w3id.org/digitalconstruction/Variables#FixedValue
 <https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that limits the value of the variable to be a fixed constant." .
+<https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/2000/01/rdf-schema#label> "FixedValue" .
 # 
 # https://w3id.org/digitalconstruction/Variables#IntervalDomain
 <https://w3id.org/digitalconstruction/Variables#IntervalDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#IntervalDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#OrderedDomain> .
-# 
-# https://w3id.org/digitalconstruction/Variables#LessOrEqualThan
-<https://w3id.org/digitalconstruction/Variables#LessOrEqualThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/digitalconstruction/Variables#LessOrEqualThan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#BinaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#IntervalDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordered domain that is represented with the minimum and maximum limits. Useful for example in temporal reasoning." .
+<https://w3id.org/digitalconstruction/Variables#IntervalDomain> <http://www.w3.org/2000/01/rdf-schema#label> "IntervalDomain" .
 # 
 # https://w3id.org/digitalconstruction/Variables#LessThan
 <https://w3id.org/digitalconstruction/Variables#LessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -268,9 +280,17 @@
 <https://w3id.org/digitalconstruction/Variables#LessThan> <http://www.w3.org/2000/01/rdf-schema#comment> "A BinaryConstraint for the value of variable1 to be less than the value of variable2" .
 <https://w3id.org/digitalconstruction/Variables#LessThan> <http://www.w3.org/2000/01/rdf-schema#label> "LessThan" .
 # 
+# https://w3id.org/digitalconstruction/Variables#LessThanOrEqual
+<https://w3id.org/digitalconstruction/Variables#LessThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#LessThanOrEqual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#BinaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#LessThanOrEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint representing that variable1 is less than variable2" .
+<https://w3id.org/digitalconstruction/Variables#LessThanOrEqual> <http://www.w3.org/2000/01/rdf-schema#label> "LessThanOrEqual" .
+# 
 # https://w3id.org/digitalconstruction/Variables#MaxDistance
 <https://w3id.org/digitalconstruction/Variables#MaxDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#MaxDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#DistanceConstraint> .
+<https://w3id.org/digitalconstruction/Variables#MaxDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that limits the distance of variable1 and variable2 to be less than or equal to fixed maximum value." .
+<https://w3id.org/digitalconstruction/Variables#MaxDistance> <http://www.w3.org/2000/01/rdf-schema#label> "MaxDistance" .
 # 
 # https://w3id.org/digitalconstruction/Variables#MaxValue
 <https://w3id.org/digitalconstruction/Variables#MaxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -281,6 +301,8 @@
 # https://w3id.org/digitalconstruction/Variables#MinDistance
 <https://w3id.org/digitalconstruction/Variables#MinDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#MinDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#DistanceConstraint> .
+<https://w3id.org/digitalconstruction/Variables#MinDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that limits the distance of variable1 and variable2 to be greater than or equal to fixed minimum value." .
+<https://w3id.org/digitalconstruction/Variables#MinDistance> <http://www.w3.org/2000/01/rdf-schema#label> "MinDistance" .
 # 
 # https://w3id.org/digitalconstruction/Variables#MinValue
 <https://w3id.org/digitalconstruction/Variables#MinValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -292,6 +314,7 @@
 <https://w3id.org/digitalconstruction/Variables#NegatedConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#NegatedConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#CompositeConstraint> .
 <https://w3id.org/digitalconstruction/Variables#NegatedConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A composite constraint that is negation of its constituent constraints (conjunctively, if there are multiple)" .
+<https://w3id.org/digitalconstruction/Variables#NegatedConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "NegatedConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#OneOfValues
 <https://w3id.org/digitalconstruction/Variables#OneOfValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -301,6 +324,8 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#Operator
 <https://w3id.org/digitalconstruction/Variables#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#Operator> <http://www.w3.org/2000/01/rdf-schema#comment> "Artihmetic operators, such as plus, minus, times and divide." .
+<https://w3id.org/digitalconstruction/Variables#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator" .
 # 
 # https://w3id.org/digitalconstruction/Variables#OrderedDomain
 <https://w3id.org/digitalconstruction/Variables#OrderedDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -317,6 +342,8 @@
 # https://w3id.org/digitalconstruction/Variables#TernaryConstraint
 <https://w3id.org/digitalconstruction/Variables#TernaryConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#TernaryConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#TernaryConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint between three variables." .
+<https://w3id.org/digitalconstruction/Variables#TernaryConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "TernaryConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#UnaryConstraint
 <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

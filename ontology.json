@@ -82,7 +82,7 @@
   "@id" : "https://w3id.org/digitalconstruction/Variables",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Seppo Törmä (seppo.torma@visualynk.com)"
+    "@value" : "Seppo Törmä"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@value" : "2020-01-12"
@@ -116,12 +116,21 @@
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#ApplicabilityState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the states in which a constraint is declared to be applicable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ApplicabilityState"
+  } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Artihmetic constraints have an operator (hasOperator) and are of the form: variable1 operator variable2 = variable3. For example, startTime + duration = endTime."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ArithmeticConstraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#TernaryConstraint"
@@ -140,10 +149,19 @@
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#Comparison",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Comparison operator such as equal or less than."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Comparison"
+  } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#CompositeConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Combination of other constraints, either elementary or composite ones. Examples are conjunctive composition (and) or negated composition (not)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "CompositeConstraint"
   } ],
@@ -201,6 +219,12 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#DistanceConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that limits the distance between variable1 and variable2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DistanceConstraint"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#BinaryConstraint"
   } ]
@@ -210,6 +234,12 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#ElementaryConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that does not have other more simple constraints as its parts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ElementaryConstraint"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
   } ]
@@ -231,18 +261,36 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#FixedDistance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that specifies that the distance of variable1 and variable2 is a fixed value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FixedDistance"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#DistanceConstraint"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#FixedValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that limits the value of the variable to be a fixed constant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FixedValue"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#UnaryConstraint"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#IntervalDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ordered domain that is represented with the minimum and maximum limits. Useful for example in temporal reasoning."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IntervalDomain"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#OrderedDomain"
   } ]
@@ -252,12 +300,6 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#LessOrEqual",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/digitalconstruction/Variables#Comparison" ]
-}, {
-  "@id" : "https://w3id.org/digitalconstruction/Variables#LessOrEqualThan",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Variables#BinaryConstraint"
-  } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#LessThan",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -271,8 +313,26 @@
     "@id" : "https://w3id.org/digitalconstruction/Variables#BinaryConstraint"
   } ]
 }, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#LessThanOrEqual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint representing that variable1 is less than variable2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LessThanOrEqual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#BinaryConstraint"
+  } ]
+}, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#MaxDistance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that limits the distance of variable1 and variable2 to be less than or equal to fixed maximum value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaxDistance"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#DistanceConstraint"
   } ]
@@ -291,6 +351,12 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#MinDistance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that limits the distance of variable1 and variable2 to be greater than or equal to fixed minimum value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MinDistance"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#DistanceConstraint"
   } ]
@@ -315,6 +381,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A composite constraint that is negation of its constituent constraints (conjunctively, if there are multiple)"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NegatedConstraint"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#CompositeConstraint"
   } ]
@@ -335,7 +404,13 @@
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#Operator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Artihmetic operators, such as plus, minus, times and divide."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Operator"
+  } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#OrderedDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -366,6 +441,12 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#TernaryConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint between three variables."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TernaryConstraint"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#ElementaryConstraint"
   } ]
