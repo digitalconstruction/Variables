@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/digitalconstruction/Variables#> .
+@prefix : <http://w3id.org/digitalconstruction/Variables#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,7 +7,7 @@
 @base <https://w3id.org/digitalconstruction/Variables> .
 
 <https://w3id.org/digitalconstruction/Variables> rdf:type owl:Ontology ;
-                                                  <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä (seppo.torma@visualynk.com)" ;
+                                                  <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä (seppo.torma"@visualynk.com) ;
                                                   <http://purl.org/dc/elements/1.1/date> "2020-01-12" ;
                                                   <http://purl.org/dc/elements/1.1/title> "Digital construction - Variables" ;
                                                   <http://purl.org/dc/terms/abstract> "Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables." ;
@@ -63,105 +63,6 @@
 #    Object Properties
 #################################################################
 
-###  http://w3id.org/digitalconstruction/Variables#hasConstituentConstraint
-:hasConstituentConstraint rdf:type owl:ObjectProperty ;
-                          rdfs:domain :CompositeConstraint ;
-                          rdfs:range :Constraint ;
-                          rdfs:label "hasConstituentConstraint" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasPropertyVariable
-:hasPropertyVariable rdf:type owl:ObjectProperty ;
-                     owl:inverseOf :isVariableOf ;
-                     rdfs:domain owl:Thing ;
-                     rdfs:range :Variable ;
-                     rdfs:comment "A relation to associate a Variable to any object" ;
-                     rdfs:label "hasPropertyVariable" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasValueType
-:hasValueType rdf:type owl:ObjectProperty ;
-              rdfs:domain :VariableDomain ;
-              rdfs:label "hasValueType" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasVariable
-:hasVariable rdf:type owl:ObjectProperty ;
-             owl:inverseOf :isConstrainedBy ;
-             rdfs:domain :Constraint ;
-             rdfs:range :Variable ;
-             rdfs:comment "A relation to associate a Constraint with a Variable" ;
-             rdfs:label "hasVariable" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasVariable1
-:hasVariable1 rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasVariable ;
-              rdfs:domain :Constraint ;
-              rdfs:range :Variable ;
-              rdfs:comment "The first variable of a constraint" ;
-              rdfs:label "hasVariable1" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasVariable2
-:hasVariable2 rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasVariable ;
-              rdfs:domain :Constraint ;
-              rdfs:range :Variable ;
-              rdfs:comment "The second variable of a constraint" ;
-              rdfs:label "hasVariable2" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasVariable3
-:hasVariable3 rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :hasVariable ;
-              rdfs:domain :Constraint ;
-              rdfs:range :Variable ;
-              rdfs:comment "The third variable of a constraint" ;
-              rdfs:label "hasVariable3" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#hasVariableDomain
-:hasVariableDomain rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :isVariableDomainOf ;
-                   rdfs:domain :Variable ;
-                   rdfs:range :VariableDomain ;
-                   rdfs:comment "The relation that associates a Variable with a VariableDomain" ;
-                   rdfs:label "hasVariableDomain" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#isConstrainedBy
-:isConstrainedBy rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Variable ;
-                 rdfs:range :Constraint ;
-                 rdfs:comment "The relation that associates a Variable with a Constraint" ;
-                 rdfs:label "isConstrainedBy" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#isVariableDomainOf
-:isVariableDomainOf rdf:type owl:ObjectProperty ;
-                    rdfs:domain :VariableDomain ;
-                    rdfs:range :Variable ;
-                    rdfs:comment "The relation that associates a VariableDomain with a Variable" ;
-                    rdfs:label "isVariableDomainOf" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#isVariableFor
-:isVariableFor rdf:type owl:ObjectProperty ;
-               rdfs:domain :Variable ;
-               rdfs:range rdfs:Resource ;
-               rdfs:comment "The property that associates a Variable with the property whose variable it is" ;
-               rdfs:label "isVariableFor" .
-
-
-###  http://w3id.org/digitalconstruction/Variables#isVariableOf
-:isVariableOf rdf:type owl:ObjectProperty ;
-              rdfs:domain :Variable ;
-              rdfs:range owl:Thing ;
-              rdfs:comment "The relation that associates the Variable with the object to which the variable belongs to" ;
-              rdfs:label "isVariableOf" .
-
-
 ###  https://w3id.org/digitalconstruction/Variables#applicableOnly
 :applicableOnly rdf:type owl:ObjectProperty ;
                 rdfs:domain :Constraint ;
@@ -174,10 +75,109 @@
                rdfs:range :Comparison .
 
 
+###  https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint
+:hasConstituentConstraint rdf:type owl:ObjectProperty ;
+                          rdfs:domain :CompositeConstraint ;
+                          rdfs:range :Constraint ;
+                          rdfs:label "hasConstituentConstraint" .
+
+
 ###  https://w3id.org/digitalconstruction/Variables#hasOperator
 :hasOperator rdf:type owl:ObjectProperty ;
              rdfs:domain :ArithmeticConstraint ;
              rdfs:range :Operator .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasPropertyVariable
+:hasPropertyVariable rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :isVariableOf ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range :Variable ;
+                     rdfs:comment "A relation to associate a Variable to any object" ;
+                     rdfs:label "hasPropertyVariable" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasValueType
+:hasValueType rdf:type owl:ObjectProperty ;
+              rdfs:domain :VariableDomain ;
+              rdfs:label "hasValueType" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasVariable
+:hasVariable rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isConstrainedBy ;
+             rdfs:domain :Constraint ;
+             rdfs:range :Variable ;
+             rdfs:comment "A relation to associate a Constraint with a Variable" ;
+             rdfs:label "hasVariable" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasVariable1
+:hasVariable1 rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasVariable ;
+              rdfs:domain :Constraint ;
+              rdfs:range :Variable ;
+              rdfs:comment "The first variable of a constraint" ;
+              rdfs:label "hasVariable1" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasVariable2
+:hasVariable2 rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasVariable ;
+              rdfs:domain :Constraint ;
+              rdfs:range :Variable ;
+              rdfs:comment "The second variable of a constraint" ;
+              rdfs:label "hasVariable2" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasVariable3
+:hasVariable3 rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasVariable ;
+              rdfs:domain :Constraint ;
+              rdfs:range :Variable ;
+              rdfs:comment "The third variable of a constraint" ;
+              rdfs:label "hasVariable3" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#hasVariableDomain
+:hasVariableDomain rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :isVariableDomainOf ;
+                   rdfs:domain :Variable ;
+                   rdfs:range :VariableDomain ;
+                   rdfs:comment "The relation that associates a Variable with a VariableDomain" ;
+                   rdfs:label "hasVariableDomain" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#isConstrainedBy
+:isConstrainedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Variable ;
+                 rdfs:range :Constraint ;
+                 rdfs:comment "The relation that associates a Variable with a Constraint" ;
+                 rdfs:label "isConstrainedBy" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#isVariableDomainOf
+:isVariableDomainOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain :VariableDomain ;
+                    rdfs:range :Variable ;
+                    rdfs:comment "The relation that associates a VariableDomain with a Variable" ;
+                    rdfs:label "isVariableDomainOf" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#isVariableFor
+:isVariableFor rdf:type owl:ObjectProperty ;
+               rdfs:domain :Variable ;
+               rdfs:range rdfs:Resource ;
+               rdfs:comment "The property that associates a Variable with the property whose variable it is" ;
+               rdfs:label "isVariableFor" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#isVariableOf
+:isVariableOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Variable ;
+              rdfs:range owl:Thing ;
+              rdfs:comment "The relation that associates the Variable with the object to which the variable belongs to" ;
+              rdfs:label "isVariableOf" .
 
 
 #################################################################
@@ -198,186 +198,213 @@
 #    Classes
 #################################################################
 
-###  http://w3id.org/digitalconstruction/Variables#BinaryConstraint
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  https://w3id.org/digitalconstruction/Variables#ApplicabilityState
+:ApplicabilityState rdf:type owl:Class ;
+                    rdfs:comment "Represents the states in which a constraint is declared to be applicable" ;
+                    rdfs:label "ApplicabilityState" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint
+:ArithmeticConstraint rdf:type owl:Class ;
+                      rdfs:subClassOf :TernaryConstraint ;
+                      rdfs:comment "Artihmetic constraints have an operator (hasOperator) and are of the form: variable1 operator variable2 = variable3. For example, startTime + duration = endTime." ;
+                      rdfs:label "ArithmeticConstraint" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#BinaryConstraint
 :BinaryConstraint rdf:type owl:Class ;
                   rdfs:subClassOf :ElementaryConstraint ;
                   rdfs:comment "A Constraint between two Variables" ;
                   rdfs:label "BinaryConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#CompositeConstraint
+###  https://w3id.org/digitalconstruction/Variables#Comparison
+:Comparison rdf:type owl:Class ;
+            rdfs:comment "Comparison operator such as equal or less than." ;
+            rdfs:label "Comparison" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#CompositeConstraint
 :CompositeConstraint rdf:type owl:Class ;
                      rdfs:subClassOf :Constraint ;
                      owl:disjointWith :ElementaryConstraint ;
+                     rdfs:comment "Combination of other constraints, either elementary or composite ones. Examples are conjunctive composition (and) or negated composition (not)." ;
                      rdfs:label "CompositeConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint
+###  https://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint
 :ConjunctiveConstraint rdf:type owl:Class ;
                        rdfs:subClassOf :CompositeConstraint ;
                        rdfs:comment "Constraint that is a conjuction (logical and) of the constituent constraints" ;
                        rdfs:label "ConjunctiveConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#Constraint
+###  https://w3id.org/digitalconstruction/Variables#Constraint
 :Constraint rdf:type owl:Class ;
             rdfs:comment "A constraint limits the possible values of variables" ;
             rdfs:label "Constraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#DifferentValues
+###  https://w3id.org/digitalconstruction/Variables#DifferentValues
 :DifferentValues rdf:type owl:Class ;
                  rdfs:subClassOf :ElementaryConstraint ;
                  rdfs:comment "A constraint that states that the involved variables have different values" ;
                  rdfs:label "DifferentValues" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint
+###  https://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint
 :DisjunctiveConstraint rdf:type owl:Class ;
                        rdfs:subClassOf :CompositeConstraint ;
                        rdfs:comment "Constraint that is a disjuction (logical ord) of the constituent constraints" ;
                        rdfs:label "DisjunctiveConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#ElementaryConstraint
+###  https://w3id.org/digitalconstruction/Variables#DistanceConstraint
+:DistanceConstraint rdf:type owl:Class ;
+                    rdfs:subClassOf :BinaryConstraint ;
+                    rdfs:comment "Constraint that limits the distance between variable1 and variable2." ;
+                    rdfs:label "DistanceConstraint" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#ElementaryConstraint
 :ElementaryConstraint rdf:type owl:Class ;
-                      rdfs:subClassOf :Constraint .
+                      rdfs:subClassOf :Constraint ;
+                      rdfs:comment "Constraint that does not have other more simple constraints as its parts." ;
+                      rdfs:label "ElementaryConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#EnumeratedDomain
+###  https://w3id.org/digitalconstruction/Variables#EnumeratedDomain
 :EnumeratedDomain rdf:type owl:Class ;
                   rdfs:subClassOf :VariableDomain ;
                   rdfs:comment "A domain of enumerated values. Should be used with object properties" ;
                   rdfs:label "EnumeratedDomain" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#FixedValue
+###  https://w3id.org/digitalconstruction/Variables#FixedDistance
+:FixedDistance rdf:type owl:Class ;
+               rdfs:subClassOf :DistanceConstraint ;
+               rdfs:comment "Constraint that specifies that the distance of variable1 and variable2 is a fixed value." ;
+               rdfs:label "FixedDistance" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#FixedValue
 :FixedValue rdf:type owl:Class ;
-            rdfs:subClassOf :UnaryConstraint .
+            rdfs:subClassOf :UnaryConstraint ;
+            rdfs:comment "Constraint that limits the value of the variable to be a fixed constant." ;
+            rdfs:label "FixedValue" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#IntervalDomain
+###  https://w3id.org/digitalconstruction/Variables#IntervalDomain
 :IntervalDomain rdf:type owl:Class ;
-                rdfs:subClassOf :OrderedDomain .
+                rdfs:subClassOf :OrderedDomain ;
+                rdfs:comment "Ordered domain that is represented with the minimum and maximum limits. Useful for example in temporal reasoning." ;
+                rdfs:label "IntervalDomain" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#LessThan
+###  https://w3id.org/digitalconstruction/Variables#LessThan
 :LessThan rdf:type owl:Class ;
           rdfs:subClassOf :BinaryConstraint ;
           rdfs:comment "A BinaryConstraint for the value of variable1 to be less than the value of variable2" ;
           rdfs:label "LessThan" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#MaxValue
+###  https://w3id.org/digitalconstruction/Variables#LessThanOrEqual
+:LessThanOrEqual rdf:type owl:Class ;
+                 rdfs:subClassOf :BinaryConstraint ;
+                 rdfs:comment "Constraint representing that variable1 is less than variable2" ;
+                 rdfs:label "LessThanOrEqual" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#MaxDistance
+:MaxDistance rdf:type owl:Class ;
+             rdfs:subClassOf :DistanceConstraint ;
+             rdfs:comment "Constraint that limits the distance of variable1 and variable2 to be less than or equal to fixed maximum value." ;
+             rdfs:label "MaxDistance" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#MaxValue
 :MaxValue rdf:type owl:Class ;
           rdfs:subClassOf :UnaryConstraint ;
           rdfs:comment "A UnaryConstraint that limits the maximum value of the variable" ;
           rdfs:label "MaxValue" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#MinValue
+###  https://w3id.org/digitalconstruction/Variables#MinDistance
+:MinDistance rdf:type owl:Class ;
+             rdfs:subClassOf :DistanceConstraint ;
+             rdfs:comment "Constraint that limits the distance of variable1 and variable2 to be greater than or equal to fixed minimum value." ;
+             rdfs:label "MinDistance" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#MinValue
 :MinValue rdf:type owl:Class ;
           rdfs:subClassOf :UnaryConstraint ;
           rdfs:comment "A UnaryConstraint that limits the minimum value of the variable" ;
           rdfs:label "MinValue" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#NegatedConstraint
+###  https://w3id.org/digitalconstruction/Variables#NegatedConstraint
 :NegatedConstraint rdf:type owl:Class ;
                    rdfs:subClassOf :CompositeConstraint ;
-                   rdfs:comment "A composite constraint that is negation of its constituent constraints (conjunctively, if there are multiple)" .
+                   rdfs:comment "A composite constraint that is negation of its constituent constraints (conjunctively, if there are multiple)" ;
+                   rdfs:label "NegatedConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#OneOfValues
+###  https://w3id.org/digitalconstruction/Variables#OneOfValues
 :OneOfValues rdf:type owl:Class ;
              rdfs:subClassOf :UnaryConstraint ;
              rdfs:comment "A unary constraint that limits the values of a variable to one of the enumerated values" ;
              rdfs:label "OneOfValues" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#OrderedDomain
+###  https://w3id.org/digitalconstruction/Variables#Operator
+:Operator rdf:type owl:Class ;
+          rdfs:comment "Artihmetic operators, such as plus, minus, times and divide." ;
+          rdfs:label "Operator" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#OrderedDomain
 :OrderedDomain rdf:type owl:Class ;
                rdfs:subClassOf :VariableDomain ;
                rdfs:comment "A domain of ordered values. Should be used with DataProperties that have ordered domains (such as numbers)." ;
                rdfs:label "OrderedDomain" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#SameValues
+###  https://w3id.org/digitalconstruction/Variables#SameValues
 :SameValues rdf:type owl:Class ;
             rdfs:subClassOf :ElementaryConstraint ;
             rdfs:comment "A constraint for all involved variables to have same values" ;
             rdfs:label "SameValues" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#UnaryConstraint
+###  https://w3id.org/digitalconstruction/Variables#TernaryConstraint
+:TernaryConstraint rdf:type owl:Class ;
+                   rdfs:subClassOf :ElementaryConstraint ;
+                   rdfs:comment "Constraint between three variables." ;
+                   rdfs:label "TernaryConstraint" .
+
+
+###  https://w3id.org/digitalconstruction/Variables#UnaryConstraint
 :UnaryConstraint rdf:type owl:Class ;
                  rdfs:subClassOf :ElementaryConstraint ;
                  rdfs:comment "A Constraint on one Variable" ;
                  rdfs:label "UnaryConstraint" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#Variable
+###  https://w3id.org/digitalconstruction/Variables#Variable
 :Variable rdf:type owl:Class ;
           rdfs:comment "A representation of a property that can assume different values, possibly limited by constraints" ;
           rdfs:label "Variable" .
 
 
-###  http://w3id.org/digitalconstruction/Variables#VariableDomain
+###  https://w3id.org/digitalconstruction/Variables#VariableDomain
 :VariableDomain rdf:type owl:Class ;
                 rdfs:comment "An instance/literal level representation for the set of possible values that can be given to the variable" ;
                 rdfs:label "VariableDomain" .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
-
-
-###  https://w3id.org/digitalconstruction/Variables#ApplicabilityState
-:ApplicabilityState rdf:type owl:Class .
-
-
-###  https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint
-:ArithmeticConstraint rdf:type owl:Class ;
-                      rdfs:subClassOf :TernaryConstraint ;
-                      rdfs:comment "Artihmetic constraints have an operator (hasOperator) and are of the form: variable1 operator variable2 = variable3. For example, startTime + duration = endTime." .
-
-
-###  https://w3id.org/digitalconstruction/Variables#Comparison
-:Comparison rdf:type owl:Class .
-
-
-###  https://w3id.org/digitalconstruction/Variables#DistanceConstraint
-:DistanceConstraint rdf:type owl:Class ;
-                    rdfs:subClassOf :BinaryConstraint .
-
-
-###  https://w3id.org/digitalconstruction/Variables#FixedDistance
-:FixedDistance rdf:type owl:Class ;
-               rdfs:subClassOf :DistanceConstraint .
-
-
-###  https://w3id.org/digitalconstruction/Variables#LessOrEqualThan
-:LessOrEqualThan rdf:type owl:Class ;
-                 rdfs:subClassOf :BinaryConstraint .
-
-
-###  https://w3id.org/digitalconstruction/Variables#MaxDistance
-:MaxDistance rdf:type owl:Class ;
-             rdfs:subClassOf :DistanceConstraint .
-
-
-###  https://w3id.org/digitalconstruction/Variables#MinDistance
-:MinDistance rdf:type owl:Class ;
-             rdfs:subClassOf :DistanceConstraint .
-
-
-###  https://w3id.org/digitalconstruction/Variables#Operator
-:Operator rdf:type owl:Class .
-
-
-###  https://w3id.org/digitalconstruction/Variables#TernaryConstraint
-:TernaryConstraint rdf:type owl:Class ;
-                   rdfs:subClassOf :ElementaryConstraint .
 
 
 #################################################################
@@ -429,6 +456,23 @@ rdfs:Resource rdf:type owl:Class .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ApplicabilityState
+                :Comparison
+                :Constraint
+                :Operator
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ApplicabilityState
+                :Variable
+                :VariableDomain
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :ConjunctiveConstraint
                 :DisjunctiveConstraint
                 :NegatedConstraint
@@ -440,23 +484,6 @@ rdfs:Resource rdf:type owl:Class .
   owl:members ( :Constraint
                 :Variable
                 :VariableDomain
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Constraint
-                :ApplicabilityState
-                :Comparison
-                :Operator
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Variable
-                :VariableDomain
-                :ApplicabilityState
               )
 ] .
 
