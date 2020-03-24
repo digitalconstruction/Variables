@@ -1,6 +1,6 @@
 <https://w3id.org/digitalconstruction/Variables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" .
-<https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/date> "2020-01-12" .
+<https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/date> "2020-03-09" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/title> "Digital construction - Variables" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/terms/abstract> "Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables." .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/terms/created> "2020-01-12" .
@@ -75,6 +75,10 @@
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> .
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Operator> .
+# 
+# https://w3id.org/digitalconstruction/Variables#hasPossibleValue
+<https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#EnumeratedDomain> .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasPropertyVariable
 <https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

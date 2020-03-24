@@ -85,7 +85,7 @@
     "@value" : "Seppo Törmä"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2020-01-12"
+    "@value" : "2020-03-09"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "Digital construction - Variables"
@@ -527,6 +527,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#Operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#hasPossibleValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#EnumeratedDomain"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasPropertyVariable",

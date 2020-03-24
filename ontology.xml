@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/digitalconstruction/Variables">
         <dc:creator>Seppo Törmä</dc:creator>
-        <dc:date>2020-01-12</dc:date>
+        <dc:date>2020-03-09</dc:date>
         <dc:title>Digital construction - Variables</dc:title>
         <terms:abstract>Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables.</terms:abstract>
         <terms:created>2020-01-12</terms:created>
@@ -149,6 +149,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasOperator">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Variables#Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/Variables#hasPossibleValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasPossibleValue">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#EnumeratedDomain"/>
     </owl:ObjectProperty>
     
 
