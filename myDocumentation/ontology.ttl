@@ -66,13 +66,15 @@
 ###  https://w3id.org/digitalconstruction/Variables#applicableOnly
 :applicableOnly rdf:type owl:ObjectProperty ;
                 rdfs:domain :Constraint ;
-                rdfs:range :ApplicabilityState .
+                rdfs:range :ApplicabilityState ;
+                rdfs:label "applicableOnly" .
 
 
 ###  https://w3id.org/digitalconstruction/Variables#hasComparison
 :hasComparison rdf:type owl:ObjectProperty ;
                rdfs:domain :ArithmeticConstraint ;
-               rdfs:range :Comparison .
+               rdfs:range :Comparison ;
+               rdfs:label "hasComparison" .
 
 
 ###  https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint
@@ -85,12 +87,14 @@
 ###  https://w3id.org/digitalconstruction/Variables#hasOperator
 :hasOperator rdf:type owl:ObjectProperty ;
              rdfs:domain :ArithmeticConstraint ;
-             rdfs:range :Operator .
+             rdfs:range :Operator ;
+             rdfs:label "hasOperator" .
 
 
 ###  https://w3id.org/digitalconstruction/Variables#hasPossibleValue
 :hasPossibleValue rdf:type owl:ObjectProperty ;
-                  rdfs:domain :EnumeratedDomain .
+                  rdfs:domain :EnumeratedDomain ;
+                  rdfs:label "hasPossibleValue" .
 
 
 ###  https://w3id.org/digitalconstruction/Variables#hasPropertyVariable
@@ -189,14 +193,23 @@
 #    Data properties
 #################################################################
 
+###  https://w3id.org/digitalconstruction/Variables#hasConstraintValue
+:hasConstraintValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :UnaryConstraint ;
+                    rdfs:range rdfs:Literal ;
+                    rdfs:label "hasConstraintValue" .
+
+
 ###  https://w3id.org/digitalconstruction/Variables#hasLowerBound
 :hasLowerBound rdf:type owl:DatatypeProperty ;
-               rdfs:domain :IntervalDomain .
+               rdfs:domain :IntervalDomain ;
+               rdfs:label "hasLowerBound" .
 
 
 ###  https://w3id.org/digitalconstruction/Variables#hasUpperBound
 :hasUpperBound rdf:type owl:DatatypeProperty ;
-               rdfs:domain :IntervalDomain .
+               rdfs:domain :IntervalDomain ;
+               rdfs:label "hasUpperBound" .
 
 
 #################################################################

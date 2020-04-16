@@ -59,11 +59,13 @@
 <https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Constraint> .
 <https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#ApplicabilityState> .
+<https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/2000/01/rdf-schema#label> "applicableOnly" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasComparison
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> .
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Comparison> .
+<https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#label> "hasComparison" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint
 <https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -75,10 +77,12 @@
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> .
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Operator> .
+<https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/2000/01/rdf-schema#label> "hasOperator" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasPossibleValue
 <https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#EnumeratedDomain> .
+<https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasPossibleValue" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasPropertyVariable
 <https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -170,13 +174,21 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/digitalconstruction/Variables#hasConstraintValue
+<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraintValue" .
+# 
 # https://w3id.org/digitalconstruction/Variables#hasLowerBound
 <https://w3id.org/digitalconstruction/Variables#hasLowerBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasLowerBound> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#IntervalDomain> .
+<https://w3id.org/digitalconstruction/Variables#hasLowerBound> <http://www.w3.org/2000/01/rdf-schema#label> "hasLowerBound" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasUpperBound
 <https://w3id.org/digitalconstruction/Variables#hasUpperBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasUpperBound> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#IntervalDomain> .
+<https://w3id.org/digitalconstruction/Variables#hasUpperBound> <http://www.w3.org/2000/01/rdf-schema#label> "hasUpperBound" .
 # 
 # 
 # 

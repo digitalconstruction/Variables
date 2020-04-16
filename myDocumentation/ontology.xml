@@ -118,6 +118,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Variables#applicableOnly">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#Constraint"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Variables#ApplicabilityState"/>
+        <rdfs:label>applicableOnly</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -128,6 +129,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasComparison">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Variables#Comparison"/>
+        <rdfs:label>hasComparison</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -149,6 +151,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasOperator">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Variables#Operator"/>
+        <rdfs:label>hasOperator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -158,6 +161,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasPossibleValue">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#EnumeratedDomain"/>
+        <rdfs:label>hasPossibleValue</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -310,11 +314,23 @@
     
 
 
+    <!-- https://w3id.org/digitalconstruction/Variables#hasConstraintValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasConstraintValue">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#UnaryConstraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>hasConstraintValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/digitalconstruction/Variables#hasLowerBound -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasLowerBound">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#IntervalDomain"/>
+        <rdfs:label>hasLowerBound</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -324,6 +340,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/Variables#hasUpperBound">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Variables#IntervalDomain"/>
+        <rdfs:label>hasUpperBound</rdfs:label>
     </owl:DatatypeProperty>
     
 
