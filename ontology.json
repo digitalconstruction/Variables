@@ -3,20 +3,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#ApplicabilityState"
-    }, {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#Comparison"
-    }, {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
-    }, {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#Operator"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
       "@id" : "https://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint"
     }, {
       "@id" : "https://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint"
@@ -25,23 +11,11 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
-    }, {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#Variable"
-    }, {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#VariableDomain"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/digitalconstruction/Variables#ApplicabilityState"
     }, {
       "@id" : "https://w3id.org/digitalconstruction/Variables#Variable"
     }, {
@@ -113,15 +87,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/digitalconstruction"
-  } ]
-}, {
-  "@id" : "https://w3id.org/digitalconstruction/Variables#ApplicabilityState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Represents the states in which a constraint is declared to be applicable"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ApplicabilityState"
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint",
@@ -151,7 +119,7 @@
   "@id" : "https://w3id.org/digitalconstruction/Variables#Comparison",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Comparison operator such as equal or less than."
+    "@value" : "Comparison operator between variables. Examples: equal or less than."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Comparison"
@@ -187,7 +155,7 @@
   "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A constraint limits the possible values of variables"
+    "@value" : "A constraint limits the possible values that specified variables can simultaneously have. Examples are that values of a set of variables need to be same, or all different, or that the value of first variable is less than the value of second one."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Constraint"
@@ -269,18 +237,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#DistanceConstraint"
-  } ]
-}, {
-  "@id" : "https://w3id.org/digitalconstruction/Variables#FixedValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Constraint that limits the value of the variable to be a fixed constant."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "FixedValue"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Variables#UnaryConstraint"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#IntervalDomain",
@@ -427,6 +383,27 @@
   "@id" : "https://w3id.org/digitalconstruction/Variables#Plus",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/digitalconstruction/Variables#Operator" ]
 }, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An objectified property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#PropertyState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Constraint that limits the value of the variable to be a fixed value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PropertyState"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#UnaryConstraint"
+  } ]
+}, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#SameValues",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -473,6 +450,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Property"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#VariableDomain",
@@ -484,20 +464,29 @@
     "@value" : "VariableDomain"
   } ]
 }, {
-  "@id" : "https://w3id.org/digitalconstruction/Variables#applicableOnly",
+  "@id" : "https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Constraint that is applicable in a Context"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "applicableOnly"
+    "@value" : "hasApplicableConstraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Variables#ApplicabilityState"
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#isApplicableIn"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasComparison",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Comparison operator of an ArithmeticConstraint. For example, in 'variable1 LessThan variable2' the Comparison operator is LessThan"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint"
   } ],
@@ -510,6 +499,9 @@
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Constraint that is part of a CompositeConstraint"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#CompositeConstraint"
   } ],
@@ -520,18 +512,6 @@
     "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
   } ]
 }, {
-  "@id" : "https://w3id.org/digitalconstruction/Variables#hasConstraintValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Variables#UnaryConstraint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasConstraintValue"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasLowerBound",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -539,6 +519,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasLowerBound"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#hasObjectValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasObjectValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasOperator",
@@ -562,6 +557,24 @@
     "@value" : "hasPossibleValue"
   } ]
 }, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associates an objectified property to any entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#isPropertyOf"
+  } ]
+}, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasPropertyVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -576,6 +589,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#Variable"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#hasProperty"
+  } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#isVariableOf"
   } ]
@@ -587,6 +603,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasUpperBound"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#UnaryConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#hasValueType",
@@ -688,19 +716,49 @@
     "@id" : "https://w3id.org/digitalconstruction/Variables#isVariableDomainOf"
   } ]
 }, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#isApplicableIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Context in which the Constraint is applicable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isApplicableIn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
+  } ]
+}, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#isConstrainedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The relation that associates a Variable with a Constraint"
+    "@value" : "The relation that associates a Property with a Constraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Variables#Variable"
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "isConstrainedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Variables#Constraint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Variables#isPropertyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associates the Property to the thing whose property it is"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isPropertyOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Variables#isVariableDomainOf",
@@ -746,5 +804,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Variables#isPropertyOf"
   } ]
 } ]

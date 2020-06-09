@@ -1,4 +1,5 @@
 <https://w3id.org/digitalconstruction/Variables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/digitalconstruction/Variables> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/Contexts> .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/date> "2020-03-09" .
 <https://w3id.org/digitalconstruction/Variables> <http://purl.org/dc/elements/1.1/title> "Digital construction - Variables" .
@@ -55,23 +56,34 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/digitalconstruction/Variables#applicableOnly
-<https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Constraint> .
-<https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#ApplicabilityState> .
-<https://w3id.org/digitalconstruction/Variables#applicableOnly> <http://www.w3.org/2000/01/rdf-schema#label> "applicableOnly" .
+# https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint
+<https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/digitalconstruction/Variables#isApplicableIn> .
+<https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#Context> .
+<https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Constraint> .
+<https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Constraint that is applicable in a Context" .
+<https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasApplicableConstraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasComparison
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> .
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Comparison> .
+<https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#comment> "The Comparison operator of an ArithmeticConstraint. For example, in 'variable1 LessThan variable2' the Comparison operator is LessThan" .
 <https://w3id.org/digitalconstruction/Variables#hasComparison> <http://www.w3.org/2000/01/rdf-schema#label> "hasComparison" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint
 <https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#CompositeConstraint> .
 <https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Constraint> .
+<https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Constraint that is part of a CompositeConstraint" .
 <https://w3id.org/digitalconstruction/Variables#hasConstituentConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstituentConstraint" .
+# 
+# https://w3id.org/digitalconstruction/Variables#hasObjectValue
+<https://w3id.org/digitalconstruction/Variables#hasObjectValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Property> .
+<https://w3id.org/digitalconstruction/Variables#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/digitalconstruction/Variables#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<https://w3id.org/digitalconstruction/Variables#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasObjectValue" .
 # 
 # https://w3id.org/digitalconstruction/Variables#hasOperator
 <https://w3id.org/digitalconstruction/Variables#hasOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -84,8 +96,17 @@
 <https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#EnumeratedDomain> .
 <https://w3id.org/digitalconstruction/Variables#hasPossibleValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasPossibleValue" .
 # 
+# https://w3id.org/digitalconstruction/Variables#hasProperty
+<https://w3id.org/digitalconstruction/Variables#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/digitalconstruction/Variables#isPropertyOf> .
+<https://w3id.org/digitalconstruction/Variables#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/digitalconstruction/Variables#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Property> .
+<https://w3id.org/digitalconstruction/Variables#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an objectified property to any entity" .
+<https://w3id.org/digitalconstruction/Variables#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasProperty" .
+# 
 # https://w3id.org/digitalconstruction/Variables#hasPropertyVariable
 <https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/Variables#hasProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/digitalconstruction/Variables#isVariableOf> .
 <https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://w3id.org/digitalconstruction/Variables#hasPropertyVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Variable> .
@@ -137,12 +158,26 @@
 <https://w3id.org/digitalconstruction/Variables#hasVariableDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation that associates a Variable with a VariableDomain" .
 <https://w3id.org/digitalconstruction/Variables#hasVariableDomain> <http://www.w3.org/2000/01/rdf-schema#label> "hasVariableDomain" .
 # 
+# https://w3id.org/digitalconstruction/Variables#isApplicableIn
+<https://w3id.org/digitalconstruction/Variables#isApplicableIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#isApplicableIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Constraint> .
+<https://w3id.org/digitalconstruction/Variables#isApplicableIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Contexts#Context> .
+<https://w3id.org/digitalconstruction/Variables#isApplicableIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The Context in which the Constraint is applicable" .
+<https://w3id.org/digitalconstruction/Variables#isApplicableIn> <http://www.w3.org/2000/01/rdf-schema#label> "isApplicableIn" .
+# 
 # https://w3id.org/digitalconstruction/Variables#isConstrainedBy
 <https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Variable> .
+<https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Property> .
 <https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Variables#Constraint> .
-<https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation that associates a Variable with a Constraint" .
+<https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation that associates a Property with a Constraint" .
 <https://w3id.org/digitalconstruction/Variables#isConstrainedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isConstrainedBy" .
+# 
+# https://w3id.org/digitalconstruction/Variables#isPropertyOf
+<https://w3id.org/digitalconstruction/Variables#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Property> .
+<https://w3id.org/digitalconstruction/Variables#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/digitalconstruction/Variables#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates the Property to the thing whose property it is" .
+<https://w3id.org/digitalconstruction/Variables#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPropertyOf" .
 # 
 # https://w3id.org/digitalconstruction/Variables#isVariableDomainOf
 <https://w3id.org/digitalconstruction/Variables#isVariableDomainOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -160,6 +195,7 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#isVariableOf
 <https://w3id.org/digitalconstruction/Variables#isVariableOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Variables#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/Variables#isPropertyOf> .
 <https://w3id.org/digitalconstruction/Variables#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#Variable> .
 <https://w3id.org/digitalconstruction/Variables#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <https://w3id.org/digitalconstruction/Variables#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation that associates the Variable with the object to which the variable belongs to" .
@@ -174,12 +210,6 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/digitalconstruction/Variables#hasConstraintValue
-<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> .
-<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/digitalconstruction/Variables#hasConstraintValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraintValue" .
-# 
 # https://w3id.org/digitalconstruction/Variables#hasLowerBound
 <https://w3id.org/digitalconstruction/Variables#hasLowerBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasLowerBound> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#IntervalDomain> .
@@ -189,6 +219,12 @@
 <https://w3id.org/digitalconstruction/Variables#hasUpperBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/digitalconstruction/Variables#hasUpperBound> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#IntervalDomain> .
 <https://w3id.org/digitalconstruction/Variables#hasUpperBound> <http://www.w3.org/2000/01/rdf-schema#label> "hasUpperBound" .
+# 
+# https://w3id.org/digitalconstruction/Variables#hasValue
+<https://w3id.org/digitalconstruction/Variables#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/digitalconstruction/Variables#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/digitalconstruction/Variables#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasValue" .
 # 
 # 
 # 
@@ -201,11 +237,6 @@
 # 
 # http://www.w3.org/2000/01/rdf-schema#Resource
 <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://w3id.org/digitalconstruction/Variables#ApplicabilityState
-<https://w3id.org/digitalconstruction/Variables#ApplicabilityState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/digitalconstruction/Variables#ApplicabilityState> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the states in which a constraint is declared to be applicable" .
-<https://w3id.org/digitalconstruction/Variables#ApplicabilityState> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicabilityState" .
 # 
 # https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint
 <https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -221,7 +252,7 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#Comparison
 <https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/2000/01/rdf-schema#comment> "Comparison operator such as equal or less than." .
+<https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/2000/01/rdf-schema#comment> "Comparison operator between variables. Examples: equal or less than." .
 <https://w3id.org/digitalconstruction/Variables#Comparison> <http://www.w3.org/2000/01/rdf-schema#label> "Comparison" .
 # 
 # https://w3id.org/digitalconstruction/Variables#CompositeConstraint
@@ -239,7 +270,7 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#Constraint
 <https://w3id.org/digitalconstruction/Variables#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/digitalconstruction/Variables#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A constraint limits the possible values of variables" .
+<https://w3id.org/digitalconstruction/Variables#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A constraint limits the possible values that specified variables can simultaneously have. Examples are that values of a set of variables need to be same, or all different, or that the value of first variable is less than the value of second one." .
 <https://w3id.org/digitalconstruction/Variables#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint" .
 # 
 # https://w3id.org/digitalconstruction/Variables#DifferentValues
@@ -277,12 +308,6 @@
 <https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#DistanceConstraint> .
 <https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that specifies that the distance of variable1 and variable2 is a fixed value." .
 <https://w3id.org/digitalconstruction/Variables#FixedDistance> <http://www.w3.org/2000/01/rdf-schema#label> "FixedDistance" .
-# 
-# https://w3id.org/digitalconstruction/Variables#FixedValue
-<https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> .
-<https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that limits the value of the variable to be a fixed constant." .
-<https://w3id.org/digitalconstruction/Variables#FixedValue> <http://www.w3.org/2000/01/rdf-schema#label> "FixedValue" .
 # 
 # https://w3id.org/digitalconstruction/Variables#IntervalDomain
 <https://w3id.org/digitalconstruction/Variables#IntervalDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -349,6 +374,17 @@
 <https://w3id.org/digitalconstruction/Variables#OrderedDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "A domain of ordered values. Should be used with DataProperties that have ordered domains (such as numbers)." .
 <https://w3id.org/digitalconstruction/Variables#OrderedDomain> <http://www.w3.org/2000/01/rdf-schema#label> "OrderedDomain" .
 # 
+# https://w3id.org/digitalconstruction/Variables#Property
+<https://w3id.org/digitalconstruction/Variables#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An objectified property" .
+<https://w3id.org/digitalconstruction/Variables#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# 
+# https://w3id.org/digitalconstruction/Variables#PropertyState
+<https://w3id.org/digitalconstruction/Variables#PropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#PropertyState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#UnaryConstraint> .
+<https://w3id.org/digitalconstruction/Variables#PropertyState> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint that limits the value of the variable to be a fixed value." .
+<https://w3id.org/digitalconstruction/Variables#PropertyState> <http://www.w3.org/2000/01/rdf-schema#label> "PropertyState" .
+# 
 # https://w3id.org/digitalconstruction/Variables#SameValues
 <https://w3id.org/digitalconstruction/Variables#SameValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/digitalconstruction/Variables#SameValues> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#ElementaryConstraint> .
@@ -369,6 +405,7 @@
 # 
 # https://w3id.org/digitalconstruction/Variables#Variable
 <https://w3id.org/digitalconstruction/Variables#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/Variables#Variable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Variables#Property> .
 <https://w3id.org/digitalconstruction/Variables#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A representation of a property that can assume different values, possibly limited by constraints" .
 <https://w3id.org/digitalconstruction/Variables#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable" .
 # 
@@ -428,54 +465,27 @@
 # 
 # 
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#ApplicabilityState> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Comparison> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Constraint> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Operator> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#NegatedConstraint> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid6 <http://www.w3.org/2002/07/owl#members> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#ApplicabilityState> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid5 <http://www.w3.org/2002/07/owl#members> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Variable> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Constraint> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#VariableDomain> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid10 <http://www.w3.org/2002/07/owl#members> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#ConjunctiveConstraint> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#DisjunctiveConstraint> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#NegatedConstraint> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid14 <http://www.w3.org/2002/07/owl#members> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Constraint> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Variable> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#VariableDomain> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#Variable> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/digitalconstruction/Variables#VariableDomain> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
