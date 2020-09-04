@@ -13,14 +13,14 @@
         <owl:imports rdf:resource="https://w3id.org/digitalconstruction/Contexts"/>
         <dc:creator>Seppo Törmä</dc:creator>
         <dc:date>2020-03-09</dc:date>
-        <dc:title>Digital construction - Variables</dc:title>
+        <dc:title>Digital Construction Variables</dc:title>
         <terms:abstract>Ontology of variables and constraints. Variables are needed to represent the intermediate stages of problem solving or decision making that are encountered, for example, in planning and scheduling processes. Variables are defined as a class that resembles rdf:Statement used for RDF reification. A variable has a VariableDomain that is an instance-level representation for the set of possible values that can be given to the variable. Constraints are associated to variables, and they can concern one, two or more variables.</terms:abstract>
         <terms:created>2020-01-12</terms:created>
         <terms:description>The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <vann:preferredNamespacePrefix>dicv</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/digitalconstruction/Variables</vann:preferredNamespaceUri>
-        <rdfs:label>Digital construction - Variables</rdfs:label>
+        <rdfs:label>Digital Construction Variables</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://w3id.org/digitalconstruction"/>
     </owl:Ontology>
     
