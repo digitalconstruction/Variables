@@ -1,8 +1,8 @@
 # pyLODE Inject configuration file (https://github.com/edmondchuc/pylode-inject)
 
 logo:
-  src: 'https://w3id.org/digitalconstruction/Variables/sections/logo.png'
-  alt: Logo of Digital construction Ontologies.
+  src: 'https://digitalconstruction.github.io/Variables/sections/logo.png'
+  alt: Logo of Digital Construction Ontologies.
   href: 'https://w3id.org/digitalconstruction'
 
 
@@ -10,7 +10,7 @@ overview:
   p: An important part of construction related information is expressed in terms of variables - properties with changing values - and constraints applying to the variables. At early stages of design and planning when detailed decisions have not been made yet, the constraints and remaining options can give valuable information. When observations of the actual entities and exectution are made, they can be related to these variables. The Digital Construction Variables ontology provides a representation of variables as objectified properties that can be associated with measurements and values at different states. 
   figures:
     - figure:
-        src: 'https://w3id.org/digitalconstruction/Variables/sections/PropertiesVariablesContexts.png'
+        src: 'https://digitalconstruction.github.io/Variables/sections/PropertiesVariablesContexts.png'
         alt: Objectified properties.
         caption: Objectified properties.
 
@@ -18,7 +18,7 @@ classes:
    figures:
      - figure:
          id: Constraint
-         src: 'https://w3id.org/digitalconstruction/Variables/sections/Constraints.png'
+         src: 'https://digitalconstruction.github.io/Variables/sections/Constraints.png'
          alt: Constraint class overview diagram.
          caption: Constraint class overview
 #     - figure:
