@@ -1,0 +1,38 @@
+# pyLODE Inject configuration file (https://github.com/edmondchuc/pylode-inject)
+
+logo:
+  src: 'https://w3id.org/digitalconstruction/Variables/sections/logo.png'
+  alt: Logo of Digital construction Ontologies.
+  href: 'https://w3id.org/digitalconstruction'
+
+
+overview:
+  p: An important part of construction related information is expressed in terms of variables - properties with changing values - and constraints applying to the variables. At early stages of design and planning when detailed decisions have not been made yet, the constraints and remaining options can give valuable information. When observations of the actual entities and exectution are made, they can be related to these variables. The Digital Construction Variables ontology provides a representation of variables as objectified properties that can be associated with measurements and values at different states. 
+  figures:
+    - figure:
+        src: 'https://w3id.org/digitalconstruction/Variables/sections/PropertiesVariablesContexts.png'
+        alt: Objectified properties.
+        caption: Objectified properties.
+
+classes:
+   figures:
+     - figure:
+         id: Constraint
+         src: 'https://w3id.org/digitalconstruction/Variables/sections/Constraints.png'
+         alt: Constraint class overview diagram.
+         caption: Constraint class overview
+#     - figure:
+#         id: organismoccurrence
+#         src: http://www.linked.data.gov.au/def/plot/images/OrganismOccurrence.png
+#         alt: Organism occurrence class overview diagram.
+#         caption: Organism Occurrence class overview
+#     - figure:
+#         id: siteorlocation
+#         src: http://www.linked.data.gov.au/def/plot/images/Site.png
+#         alt: Site class overview diagram.
+#         caption: Site class overview
+#     - figure:
+#         id: survey
+#         src: http://www.linked.data.gov.au/def/plot/images/Activities.png
+#         alt: Survey overview diagram.
+#         caption: Properties of <a href="http://www.w3.org/ns/prov#Activity">prov:Activity</a> and SOSA specialisations of it that a Survey may use being, itself, a specialisation of <a href="http://www.w3.org/ns/prov#Activity">prov:Activity</a>
