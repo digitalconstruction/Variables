@@ -195,7 +195,7 @@
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario.</p>"
+        "@value": "<p>The objectified property representation is orthogonal to the other definitions in the ontologies: any property can be objectified and consequently be subject of constraints. </p>"
       }
     ],
     "https://schema.org/license": [
@@ -265,15 +265,6 @@
      2020-01-12
     </dd>
     <dt>
-     Imports
-    </dt>
-    <dd>
-     <a href="https://w3id.org/digitalconstruction/Contexts">
-      https://w3id.org/digitalconstruction/Contexts
-     </a>
-     <br>
-    </dd>
-    <dt>
      License
     </dt>
     <dd>
@@ -295,7 +286,7 @@
    </h2>
    <div id="description">
     <p>
-     The variable representation is orthogonal to the other definitions in the ontologies: any property can be associated with a variable and consequently also constraints, if need be. It means that not all properties of the same type need be variables; instead, this can be determined by the use scenario.
+     The objectified property representation is orthogonal to the other definitions in the ontologies: any property can be objectified and consequently be subject of constraints.
     </p>
    </div>
   </section>
@@ -499,6 +490,21 @@
      </a>
     </li>
     <li>
+     <a href="#QuantitativeProperty">
+      QuantitativeProperty
+     </a>
+    </li>
+    <li>
+     <a href="#QuantitativeState">
+      QuantitativeState
+     </a>
+    </li>
+    <li>
+     <a href="#QuantityKind">
+      QuantityKind
+     </a>
+    </li>
+    <li>
      <a href="#Resource">
       Resource
      </a>
@@ -506,6 +512,11 @@
     <li>
      <a href="#SameValues">
       SameValues
+     </a>
+    </li>
+    <li>
+     <a href="#Subject">
+      Subject
      </a>
     </li>
     <li>
@@ -519,13 +530,8 @@
      </a>
     </li>
     <li>
-     <a href="#Variable">
-      Variable
-     </a>
-    </li>
-    <li>
-     <a href="#VariableDomain">
-      VariableDomain
+     <a href="#ValueDomain">
+      ValueDomain
      </a>
     </li>
    </ul>
@@ -552,8 +558,8 @@
        In range of
       </th>
       <td>
-       <a href="#isVariableFor">
-        isVariableFor
+       <a href="#isPropertyFor">
+        isPropertyFor
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -587,7 +593,7 @@
       </th>
       <td>
        <p>
-        Artihmetic constraints have an operator (hasOperator) and are of the form: variable1 operator variable2 = variable3. For example, startTime + duration = endTime.
+        Artihmetic constraints have an operator (hasOperator) and are of the form: Property1 operator Porperty2 = Property3. For example, startTime + duration = endTime.
        </p>
       </td>
      </tr>
@@ -610,15 +616,15 @@
        In domain of
       </th>
       <td>
-       <a href="#hasComparison">
-        hasComparison
+       <a href="#hasOperator">
+        hasOperator
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#hasOperator">
-        hasOperator
+       <a href="#hasComparison">
+        hasComparison
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -652,7 +658,7 @@
       </th>
       <td>
        <p>
-        A Constraint between two Variables
+        A Constraint between two Properties
        </p>
       </td>
      </tr>
@@ -682,15 +688,15 @@
         c
        </sup>
        <br>
-       <a href="#DistanceConstraint">
-        DistanceConstraint
+       <a href="#LessThan">
+        LessThan
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#LessThan">
-        LessThan
+       <a href="#DistanceConstraint">
+        DistanceConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -724,7 +730,7 @@
       </th>
       <td>
        <p>
-        Comparison operator between variables. Examples: equal or less than.
+        Comparison operator between Properties. Examples: equal or less than.
        </p>
       </td>
      </tr>
@@ -791,6 +797,13 @@
        Sub-classes
       </th>
       <td>
+       <a href="#ConjunctiveConstraint">
+        ConjunctiveConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
        <a href="#NegatedConstraint">
         NegatedConstraint
        </a>
@@ -800,13 +813,6 @@
        <br>
        <a href="#DisjunctiveConstraint">
         DisjunctiveConstraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
-       <a href="#ConjunctiveConstraint">
-        ConjunctiveConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -898,7 +904,7 @@
       </th>
       <td>
        <p>
-        A constraint limits the possible values that specified variables can simultaneously have. Examples are that values of a set of variables need to be same, or all different, or that the value of first variable is less than the value of second one.
+        A constraint limits the possible values that specified Properties can simultaneously have. Examples: values of a set of Prperties must all be same, or all different, or that the value of first Property is less than the value of second one.
        </p>
       </td>
      </tr>
@@ -907,15 +913,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="#ElementaryConstraint">
-        ElementaryConstraint
+       <a href="#CompositeConstraint">
+        CompositeConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#CompositeConstraint">
-        CompositeConstraint
+       <a href="#ElementaryConstraint">
+        ElementaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -928,36 +934,29 @@
        In domain of
       </th>
       <td>
-       <a href="#hasVariable2">
-        hasVariable2
+       <a href="#constrainsProperty3">
+        constrainsProperty3
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#hasVariable3">
-        hasVariable3
+       <a href="#constrainsProperty2">
+        constrainsProperty2
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#hasVariable">
-        hasVariable
+       <a href="#constrainsProperty1">
+        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#isApplicableIn">
-        isApplicableIn
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasVariable1">
-        hasVariable1
+       <a href="#constrainsProperty">
+        constrainsProperty
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -970,22 +969,15 @@
        In range of
       </th>
       <td>
-       <a href="#hasConstituentConstraint">
-        hasConstituentConstraint
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasApplicableConstraint">
-        hasApplicableConstraint
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
        <a href="#isConstrainedBy">
         isConstrainedBy
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#hasConstituentConstraint">
+        hasConstituentConstraint
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1028,7 +1020,7 @@
       </th>
       <td>
        <p>
-        A constraint that states that the involved variables have different values
+        A Constraint that states that the involved Properties (two or more) must have different values.
        </p>
       </td>
      </tr>
@@ -1116,7 +1108,7 @@
       </th>
       <td>
        <p>
-        Constraint that limits the distance between variable1 and variable2.
+        Constraint that limits the distance between property1 and property2.
        </p>
       </td>
      </tr>
@@ -1139,6 +1131,13 @@
        Sub-classes
       </th>
       <td>
+       <a href="#MinDistance">
+        MinDistance
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
        <a href="#MaxDistance">
         MaxDistance
        </a>
@@ -1148,13 +1147,6 @@
        <br>
        <a href="#FixedDistance">
         FixedDistance
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
-       <a href="#MinDistance">
-        MinDistance
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1283,8 +1275,8 @@
        Super-classes
       </th>
       <td>
-       <a href="#VariableDomain">
-        VariableDomain
+       <a href="#ValueDomain">
+        ValueDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1332,7 +1324,7 @@
       </th>
       <td>
        <p>
-        Constraint that specifies that the distance of variable1 and variable2 is a fixed value.
+        Constraint that specifies that the distance of property1 and property2 is a fixed value.
        </p>
       </td>
      </tr>
@@ -1399,15 +1391,15 @@
        In domain of
       </th>
       <td>
-       <a href="#hasLowerBound">
-        hasLowerBound
+       <a href="#hasUpperBound">
+        hasUpperBound
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
        </sup>
        <br>
-       <a href="#hasUpperBound">
-        hasUpperBound
+       <a href="#hasLowerBound">
+        hasLowerBound
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
@@ -1441,7 +1433,7 @@
       </th>
       <td>
        <p>
-        A BinaryConstraint for the value of variable1 to be less than the value of variable2
+        A BinaryConstraint for the value of property1 to be less than the value of property2
        </p>
       </td>
      </tr>
@@ -1485,7 +1477,7 @@
       </th>
       <td>
        <p>
-        Constraint representing that variable1 is less than variable2
+        Constraint representing that property1 is less than property2
        </p>
       </td>
      </tr>
@@ -1529,7 +1521,7 @@
       </th>
       <td>
        <p>
-        Constraint that limits the distance of variable1 and variable2 to be less than or equal to fixed maximum value.
+        Constraint that limits the distance of property1 and property2 to be less than or equal to fixed maximum value.
        </p>
       </td>
      </tr>
@@ -1573,7 +1565,7 @@
       </th>
       <td>
        <p>
-        A UnaryConstraint that limits the maximum value of the variable
+        A UnaryConstraint that limits the maximum value of the property
        </p>
       </td>
      </tr>
@@ -1617,7 +1609,7 @@
       </th>
       <td>
        <p>
-        Constraint that limits the distance of variable1 and variable2 to be greater than or equal to fixed minimum value.
+        Constraint that limits the distance of property1 and property2 to be greater than or equal to fixed minimum value.
        </p>
       </td>
      </tr>
@@ -1661,7 +1653,7 @@
       </th>
       <td>
        <p>
-        A UnaryConstraint that limits the minimum value of the variable
+        A UnaryConstraint that limits the minimum value of the property
        </p>
       </td>
      </tr>
@@ -1749,7 +1741,7 @@
       </th>
       <td>
        <p>
-        A unary constraint that limits the values of a variable to one of the enumerated values
+        A unary constraint that limits the values of a property to one of the enumerated values
        </p>
       </td>
      </tr>
@@ -1846,8 +1838,8 @@
        Super-classes
       </th>
       <td>
-       <a href="#VariableDomain">
-        VariableDomain
+       <a href="#ValueDomain">
+        ValueDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1904,8 +1896,8 @@
        Sub-classes
       </th>
       <td>
-       <a href="#Variable">
-        Variable
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1918,15 +1910,8 @@
        In domain of
       </th>
       <td>
-       <a href="#isPropertyOf">
-        isPropertyOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasObjectValue">
-        hasObjectValue
+       <a href="#hasPropertyState">
+        hasPropertyState
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1934,6 +1919,20 @@
        <br>
        <a href="#isConstrainedBy">
         isConstrainedBy
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#isPropertyOf">
+        isPropertyOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#isPropertyFor">
+        isPropertyFor
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1981,7 +1980,86 @@
       </th>
       <td>
        <p>
-        Constraint that limits the value of the variable to be a fixed value.
+        Defines or constrains the value of a Property.
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Sub-classes
+      </th>
+      <td>
+       <a href="#QuantitativeState">
+        QuantitativeState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasTimeOfValidity">
+        hasTimeOfValidity
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#hasObjectValue">
+        hasObjectValue
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#hasPropertyState">
+        hasPropertyState
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="QuantitativeProperty">
+    <h3>
+     QuantitativeProperty
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#QuantitativeProperty
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        A Property that can assume quantitative values. Examples: 'height', 'weight', 'number of items'
        </p>
       </td>
      </tr>
@@ -1990,11 +2068,142 @@
        Super-classes
       </th>
       <td>
-       <a href="#UnaryConstraint">
-        UnaryConstraint
+       <a href="#Property">
+        Property
        </a>
        <sup class="sup-c" title="class">
         c
+       </sup>
+       <br>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasValueDomain">
+        hasValueDomain
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#hasQuantityKind">
+        hasQuantityKind
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#constrainsProperty2">
+        constrainsProperty2
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#constrainsProperty3">
+        constrainsProperty3
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#constrainsProperty1">
+        constrainsProperty1
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#isValueDomainOf">
+        isValueDomainOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="QuantitativeState">
+    <h3>
+     QuantitativeState
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#QuantitativeState
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="QuantityKind">
+    <h3>
+     QuantityKind
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#QuantityKind
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#hasQuantityKind">
+        hasQuantityKind
+       </a>
+       <sup class="sup-op" title="object property">
+        op
        </sup>
        <br>
       </td>
@@ -2025,7 +2234,7 @@
       </th>
       <td>
        <p>
-        A constraint for all involved variables to have same values
+        A constraint for all involved Properties must have a same value
        </p>
       </td>
      </tr>
@@ -2039,6 +2248,64 @@
        </a>
        <sup class="sup-c" title="class">
         c
+       </sup>
+       <br>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="Subject">
+    <h3>
+     Subject
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#Subject
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        Anything that can have properties
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasProperty">
+        hasProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#isPropertyOf">
+        isPropertyOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
        </sup>
        <br>
       </td>
@@ -2069,7 +2336,7 @@
       </th>
       <td>
        <p>
-        Constraint between three variables.
+        Constraint between three Properties.
        </p>
       </td>
      </tr>
@@ -2150,6 +2417,13 @@
        Sub-classes
       </th>
       <td>
+       <a href="#MaxValue">
+        MaxValue
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
        <a href="#OneOfValues">
         OneOfValues
        </a>
@@ -2159,20 +2433,6 @@
        <br>
        <a href="#MinValue">
         MinValue
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
-       <a href="#PropertyState">
-        PropertyState
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
-       <a href="#MaxValue">
-        MaxValue
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2196,9 +2456,9 @@
      </tr>
     </table>
    </div>
-   <div class="entity class" id="Variable">
+   <div class="entity class" id="ValueDomain">
     <h3>
-     Variable
+     ValueDomain
      <sup class="sup-c" title="class">
       c
      </sup>
@@ -2210,128 +2470,7 @@
       </th>
       <td>
        <code>
-        https://w3id.org/digitalconstruction/Variables#Variable
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       <p>
-        A representation of a property that can assume different values, possibly limited by constraints
-       </p>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-classes
-      </th>
-      <td>
-       <a href="#Property">
-        Property
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       In domain of
-      </th>
-      <td>
-       <a href="#hasVariableDomain">
-        hasVariableDomain
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#isVariableFor">
-        isVariableFor
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#isVariableOf">
-        isVariableOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       In range of
-      </th>
-      <td>
-       <a href="#hasVariable3">
-        hasVariable3
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasPropertyVariable">
-        hasPropertyVariable
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasVariable">
-        hasVariable
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#isVariableDomainOf">
-        isVariableDomainOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasVariable1">
-        hasVariable1
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#hasVariable2">
-        hasVariable2
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity class" id="VariableDomain">
-    <h3>
-     VariableDomain
-     <sup class="sup-c" title="class">
-      c
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#VariableDomain
+        https://w3id.org/digitalconstruction/Variables#ValueDomain
        </code>
       </td>
      </tr>
@@ -2350,15 +2489,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="#EnumeratedDomain">
-        EnumeratedDomain
+       <a href="#OrderedDomain">
+        OrderedDomain
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#OrderedDomain">
-        OrderedDomain
+       <a href="#EnumeratedDomain">
+        EnumeratedDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2371,15 +2510,15 @@
        In domain of
       </th>
       <td>
-       <a href="#hasValueType">
-        hasValueType
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#isVariableDomainOf">
-        isVariableDomainOf
+       <a href="#hasValueType">
+        hasValueType
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2392,8 +2531,8 @@
        In range of
       </th>
       <td>
-       <a href="#hasVariableDomain">
-        hasVariableDomain
+       <a href="#hasValueDomain">
+        hasValueDomain
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2415,8 +2554,23 @@
    </h2>
    <ul class="hlist">
     <li>
-     <a href="#hasApplicableConstraint">
-      hasApplicableConstraint
+     <a href="#constrainsProperty">
+      constrainsProperty
+     </a>
+    </li>
+    <li>
+     <a href="#constrainsProperty1">
+      constrainsProperty1
+     </a>
+    </li>
+    <li>
+     <a href="#constrainsProperty2">
+      constrainsProperty2
+     </a>
+    </li>
+    <li>
+     <a href="#constrainsProperty3">
+      constrainsProperty3
      </a>
     </li>
     <li>
@@ -2450,8 +2604,23 @@
      </a>
     </li>
     <li>
-     <a href="#hasPropertyVariable">
-      hasPropertyVariable
+     <a href="#hasPropertyState">
+      hasPropertyState
+     </a>
+    </li>
+    <li>
+     <a href="#hasQuantityKind">
+      hasQuantityKind
+     </a>
+    </li>
+    <li>
+     <a href="#hasTimeOfValidity">
+      hasTimeOfValidity
+     </a>
+    </li>
+    <li>
+     <a href="#hasValueDomain">
+      hasValueDomain
      </a>
     </li>
     <li>
@@ -2460,38 +2629,13 @@
      </a>
     </li>
     <li>
-     <a href="#hasVariable">
-      hasVariable
-     </a>
-    </li>
-    <li>
-     <a href="#hasVariable1">
-      hasVariable1
-     </a>
-    </li>
-    <li>
-     <a href="#hasVariable2">
-      hasVariable2
-     </a>
-    </li>
-    <li>
-     <a href="#hasVariable3">
-      hasVariable3
-     </a>
-    </li>
-    <li>
-     <a href="#hasVariableDomain">
-      hasVariableDomain
-     </a>
-    </li>
-    <li>
-     <a href="#isApplicableIn">
-      isApplicableIn
-     </a>
-    </li>
-    <li>
      <a href="#isConstrainedBy">
       isConstrainedBy
+     </a>
+    </li>
+    <li>
+     <a href="#isPropertyFor">
+      isPropertyFor
      </a>
     </li>
     <li>
@@ -2500,24 +2644,14 @@
      </a>
     </li>
     <li>
-     <a href="#isVariableDomainOf">
-      isVariableDomainOf
-     </a>
-    </li>
-    <li>
-     <a href="#isVariableFor">
-      isVariableFor
-     </a>
-    </li>
-    <li>
-     <a href="#isVariableOf">
-      isVariableOf
+     <a href="#isValueDomainOf">
+      isValueDomainOf
      </a>
     </li>
    </ul>
-   <div class="entity property" id="hasApplicableConstraint">
+   <div class="entity property" id="constrainsProperty">
     <h3>
-     hasApplicableConstraint
+     constrainsProperty
      <sup class="sup-op" title="object property">
       op
      </sup>
@@ -2529,7 +2663,7 @@
       </th>
       <td>
        <code>
-        https://w3id.org/digitalconstruction/Variables#hasApplicableConstraint
+        https://w3id.org/digitalconstruction/Variables#constrainsProperty
        </code>
       </td>
      </tr>
@@ -2538,7 +2672,7 @@
        Description
       </th>
       <td>
-       A Constraint that is applicable in a Context
+       A relation to associate a Constraint with a Property
       </td>
      </tr>
      <tr>
@@ -2546,8 +2680,8 @@
        Inverse properties
       </th>
       <td>
-       <a href="#isApplicableIn">
-        isApplicableIn
+       <a href="#isConstrainedBy">
+        isConstrainedBy
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2559,8 +2693,8 @@
        Domain(s)
       </th>
       <td>
-       <a href="https://w3id.org/digitalconstruction/Contexts#Context">
-        https://w3id.org/digitalconstruction/Contexts#Context
+       <a href="#Constraint">
+        Constraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2572,8 +2706,209 @@
        Range(s)
       </th>
       <td>
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="constrainsProperty1">
+    <h3>
+     constrainsProperty1
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#constrainsProperty1
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The first property associated with a constraint
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
        <a href="#Constraint">
         Constraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="constrainsProperty2">
+    <h3>
+     constrainsProperty2
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#constrainsProperty2
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The second property associated with a constraint
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Constraint">
+        Constraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="constrainsProperty3">
+    <h3>
+     constrainsProperty3
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#constrainsProperty3
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The third property associated with a constraint
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Constraint">
+        Constraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2605,7 +2940,7 @@
        Description
       </th>
       <td>
-       The Comparison operator of an ArithmeticConstraint. For example, in 'variable1 LessThan variable2' the Comparison operator is LessThan
+       The Comparison operator of an ArithmeticConstraint. For example, in 'property1 LessThan property2' the Comparison operator is LessThan
       </td>
      </tr>
      <tr>
@@ -2720,8 +3055,8 @@
        Domain(s)
       </th>
       <td>
-       <a href="#Property">
-        Property
+       <a href="#PropertyState">
+        PropertyState
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2866,8 +3201,8 @@
        Domain(s)
       </th>
       <td>
-       <a href="http://www.w3.org/2002/07/owl#Thing">
-        owl:Thing
+       <a href="#Subject">
+        Subject
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2889,9 +3224,9 @@
      </tr>
     </table>
    </div>
-   <div class="entity property" id="hasPropertyVariable">
+   <div class="entity property" id="hasPropertyState">
     <h3>
-     hasPropertyVariable
+     hasPropertyState
      <sup class="sup-op" title="object property">
       op
      </sup>
@@ -2903,42 +3238,8 @@
       </th>
       <td>
        <code>
-        https://w3id.org/digitalconstruction/Variables#hasPropertyVariable
+        https://w3id.org/digitalconstruction/Variables#hasPropertyState
        </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       A relation to associate a Variable to any object
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="#hasProperty">
-        hasProperty
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Inverse properties
-      </th>
-      <td>
-       <a href="#isVariableOf">
-        isVariableOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
       </td>
      </tr>
      <tr>
@@ -2946,8 +3247,8 @@
        Domain(s)
       </th>
       <td>
-       <a href="http://www.w3.org/2002/07/owl#Thing">
-        owl:Thing
+       <a href="#Property">
+        Property
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2959,8 +3260,162 @@
        Range(s)
       </th>
       <td>
-       <a href="#Variable">
-        Variable
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasQuantityKind">
+    <h3>
+     hasQuantityKind
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#hasQuantityKind
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#QuantityKind">
+        QuantityKind
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasTimeOfValidity">
+    <h3>
+     hasTimeOfValidity
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#hasTimeOfValidity
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The time when the value specified is valid
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasValueDomain">
+    <h3>
+     hasValueDomain
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#hasValueDomain
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       The relation that associates a Property with a ValueDomain
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#isValueDomainOf">
+        isValueDomainOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#ValueDomain">
+        ValueDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2992,397 +3447,8 @@
        Domain(s)
       </th>
       <td>
-       <a href="#VariableDomain">
-        VariableDomain
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="hasVariable">
-    <h3>
-     hasVariable
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#hasVariable
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       A relation to associate a Constraint with a Variable
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Inverse properties
-      </th>
-      <td>
-       <a href="#isConstrainedBy">
-        isConstrainedBy
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Constraint">
-        Constraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="hasVariable1">
-    <h3>
-     hasVariable1
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#hasVariable1
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The first variable of a constraint
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="#hasVariable">
-        hasVariable
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Constraint">
-        Constraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="hasVariable2">
-    <h3>
-     hasVariable2
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#hasVariable2
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The second variable of a constraint
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="#hasVariable">
-        hasVariable
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Constraint">
-        Constraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="hasVariable3">
-    <h3>
-     hasVariable3
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#hasVariable3
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The third variable of a constraint
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="#hasVariable">
-        hasVariable
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Constraint">
-        Constraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="hasVariableDomain">
-    <h3>
-     hasVariableDomain
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#hasVariableDomain
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The relation that associates a Variable with a VariableDomain
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Inverse properties
-      </th>
-      <td>
-       <a href="#isVariableDomainOf">
-        isVariableDomainOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="#VariableDomain">
-        VariableDomain
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="isApplicableIn">
-    <h3>
-     isApplicableIn
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#isApplicableIn
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The Context in which the Constraint is applicable
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Constraint">
-        Constraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="https://w3id.org/digitalconstruction/Contexts#Context">
-        https://w3id.org/digitalconstruction/Contexts#Context
+       <a href="#ValueDomain">
+        ValueDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3445,6 +3511,60 @@
      </tr>
     </table>
    </div>
+   <div class="entity property" id="isPropertyFor">
+    <h3>
+     isPropertyFor
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/Variables#isPropertyFor
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Associates a Property object to the owl:ObjectProperty or owl:DatatypeProperty that it objectifies
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Property">
+        Property
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">
+        rdfs:Resource
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
    <div class="entity property" id="isPropertyOf">
     <h3>
      isPropertyOf
@@ -3489,8 +3609,8 @@
        Range(s)
       </th>
       <td>
-       <a href="http://www.w3.org/2002/07/owl#Thing">
-        owl:Thing
+       <a href="#Subject">
+        Subject
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3499,9 +3619,9 @@
      </tr>
     </table>
    </div>
-   <div class="entity property" id="isVariableDomainOf">
+   <div class="entity property" id="isValueDomainOf">
     <h3>
-     isVariableDomainOf
+     isValueDomainOf
      <sup class="sup-op" title="object property">
       op
      </sup>
@@ -3513,7 +3633,7 @@
       </th>
       <td>
        <code>
-        https://w3id.org/digitalconstruction/Variables#isVariableDomainOf
+        https://w3id.org/digitalconstruction/Variables#isValueDomainOf
        </code>
       </td>
      </tr>
@@ -3522,7 +3642,7 @@
        Description
       </th>
       <td>
-       The relation that associates a VariableDomain with a Variable
+       The relation that associates a ValueDomain with a Property
       </td>
      </tr>
      <tr>
@@ -3530,8 +3650,8 @@
        Domain(s)
       </th>
       <td>
-       <a href="#VariableDomain">
-        VariableDomain
+       <a href="#ValueDomain">
+        ValueDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -3543,129 +3663,8 @@
        Range(s)
       </th>
       <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="isVariableFor">
-    <h3>
-     isVariableFor
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#isVariableFor
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The property that associates a Variable with the property whose variable it is
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">
-        rdfs:Resource
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="isVariableOf">
-    <h3>
-     isVariableOf
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/Variables#isVariableOf
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       The relation that associates the Variable with the object to which the variable belongs to
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="#isPropertyOf">
-        isPropertyOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       <a href="#Variable">
-        Variable
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="http://www.w3.org/2002/07/owl#Thing">
-        owl:Thing
+       <a href="#QuantitativeProperty">
+        QuantitativeProperty
        </a>
        <sup class="sup-c" title="class">
         c
