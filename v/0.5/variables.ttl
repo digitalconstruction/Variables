@@ -1,10 +1,10 @@
-@prefix : <https://w3id.org/digitalconstruction/Variables#> .
+@prefix : <https://w3id.org/digitalconstruction/0.5/Variables#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/digitalconstruction/Variables> .
+@base <https://w3id.org/digitalconstruction/0.5/Variables> .
 
 <https://w3id.org/digitalconstruction/Variables> rdf:type owl:Ontology ;
                                                   <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" ;
@@ -15,9 +15,9 @@
                                                   <http://purl.org/dc/terms/description> "The objectified property representation is orthogonal to the other definitions in the ontologies: any property can be objectified and consequently be subject of constraints. " ;
                                                   <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "dicv" ;
-                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/Variables" ;
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/0.5/Variables" ;
                                                   rdfs:label "Digital Construction Variables" ;
-                                                  rdfs:seeAlso <https://w3id.org/digitalconstruction> .
+                                                  rdfs:seeAlso <https://w3id.org/digitalconstruction/0.5/> .
 
 #################################################################
 #    Annotation properties
