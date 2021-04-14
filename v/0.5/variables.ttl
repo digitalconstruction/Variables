@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/digitalconstruction/0.5/Variables> .
 
-<https://w3id.org/digitalconstruction/Variables> rdf:type owl:Ontology ;
+<https://w3id.org/digitalconstruction/0.5/Variables> rdf:type owl:Ontology ;
                                                   <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" ;
                                                   <http://purl.org/dc/elements/1.1/date> "2021-04-06" ;
                                                   <http://purl.org/dc/elements/1.1/title> "Digital Construction Variables" ;
