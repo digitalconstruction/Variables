@@ -530,6 +530,11 @@
      </a>
     </li>
     <li>
+     <a href="#Unit">
+      Unit
+     </a>
+    </li>
+    <li>
      <a href="#ValueDomain">
       ValueDomain
      </a>
@@ -688,15 +693,15 @@
         c
        </sup>
        <br>
-       <a href="#DistanceConstraint">
-        DistanceConstraint
+       <a href="#LessThan">
+        LessThan
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#LessThan">
-        LessThan
+       <a href="#DistanceConstraint">
+        DistanceConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -797,13 +802,6 @@
        Sub-classes
       </th>
       <td>
-       <a href="#ConjunctiveConstraint">
-        ConjunctiveConstraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
        <a href="#DisjunctiveConstraint">
         DisjunctiveConstraint
        </a>
@@ -813,6 +811,13 @@
        <br>
        <a href="#NegatedConstraint">
         NegatedConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
+       <a href="#ConjunctiveConstraint">
+        ConjunctiveConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -913,15 +918,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="#CompositeConstraint">
-        CompositeConstraint
+       <a href="#ElementaryConstraint">
+        ElementaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#ElementaryConstraint">
-        ElementaryConstraint
+       <a href="#CompositeConstraint">
+        CompositeConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -934,15 +939,15 @@
        In domain of
       </th>
       <td>
-       <a href="#constrainsProperty">
-        constrainsProperty
+       <a href="#constrainsProperty1">
+        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#constrainsProperty2">
-        constrainsProperty2
+       <a href="#constrainsProperty">
+        constrainsProperty
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -955,8 +960,8 @@
         op
        </sup>
        <br>
-       <a href="#constrainsProperty1">
-        constrainsProperty1
+       <a href="#constrainsProperty2">
+        constrainsProperty2
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -969,15 +974,15 @@
        In range of
       </th>
       <td>
-       <a href="#isConstrainedBy">
-        isConstrainedBy
+       <a href="#hasConstituentConstraint">
+        hasConstituentConstraint
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#hasConstituentConstraint">
-        hasConstituentConstraint
+       <a href="#isConstrainedBy">
+        isConstrainedBy
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1203,15 +1208,15 @@
        Sub-classes
       </th>
       <td>
-       <a href="#BinaryConstraint">
-        BinaryConstraint
+       <a href="#DifferentValues">
+        DifferentValues
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#DifferentValues">
-        DifferentValues
+       <a href="#UnaryConstraint">
+        UnaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1224,8 +1229,8 @@
         c
        </sup>
        <br>
-       <a href="#UnaryConstraint">
-        UnaryConstraint
+       <a href="#BinaryConstraint">
+        BinaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1910,15 +1915,8 @@
        In domain of
       </th>
       <td>
-       <a href="#isPropertyOf">
-        isPropertyOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#isPropertyFor">
-        isPropertyFor
+       <a href="#hasPropertyState">
+        hasPropertyState
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1931,8 +1929,15 @@
         op
        </sup>
        <br>
-       <a href="#hasPropertyState">
-        hasPropertyState
+       <a href="#isPropertyOf">
+        isPropertyOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#isPropertyFor">
+        isPropertyFor
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2003,6 +2008,13 @@
        In domain of
       </th>
       <td>
+       <a href="#hasTimeOfValidity">
+        hasTimeOfValidity
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
        <a href="#hasObjectValue">
         hasObjectValue
        </a>
@@ -2010,8 +2022,8 @@
         op
        </sup>
        <br>
-       <a href="#hasTimeOfValidity">
-        hasTimeOfValidity
+       <a href="#hasUnit">
+        hasUnit
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2103,8 +2115,22 @@
        In range of
       </th>
       <td>
+       <a href="#constrainsProperty2">
+        constrainsProperty2
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
        <a href="#constrainsProperty">
         constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#constrainsProperty1">
+        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2117,22 +2143,8 @@
         op
        </sup>
        <br>
-       <a href="#constrainsProperty2">
-        constrainsProperty2
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
        <a href="#isValueDomainOf">
         isValueDomainOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#constrainsProperty1">
-        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2192,6 +2204,30 @@
        <code>
         https://w3id.org/digitalconstruction/0.5/Variables#QuantityKind
        </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        Quantity Kind - Aligned with qudt:QuantityKind
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://www.w3.org/2002/07/owl#Thing">
+        owl:Thing
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
       </td>
      </tr>
      <tr>
@@ -2424,15 +2460,15 @@
         c
        </sup>
        <br>
-       <a href="#MinValue">
-        MinValue
+       <a href="#OneOfValues">
+        OneOfValues
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br>
-       <a href="#OneOfValues">
-        OneOfValues
+       <a href="#MinValue">
+        MinValue
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2450,6 +2486,64 @@
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
+       </sup>
+       <br>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="Unit">
+    <h3>
+     Unit
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Variables#Unit
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        Unit of Measure - Aligned with qudt:Unit
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-classes
+      </th>
+      <td>
+       <a href="http://www.w3.org/2002/07/owl#Thing">
+        owl:Thing
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#hasUnit">
+        hasUnit
+       </a>
+       <sup class="sup-op" title="object property">
+        op
        </sup>
        <br>
       </td>
@@ -2510,15 +2604,15 @@
        In domain of
       </th>
       <td>
-       <a href="#isValueDomainOf">
-        isValueDomainOf
+       <a href="#hasValueType">
+        hasValueType
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#hasValueType">
-        hasValueType
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2616,6 +2710,11 @@
     <li>
      <a href="#hasTimeOfValidity">
       hasTimeOfValidity
+     </a>
+    </li>
+    <li>
+     <a href="#hasUnit">
+      hasUnit
      </a>
     </li>
     <li>
@@ -3349,6 +3448,60 @@
       <td>
        <a href="#PropertyState">
         PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasUnit">
+    <h3>
+     hasUnit
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Variables#hasUnit
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Associates a unit of measure to a value
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Unit">
+        Unit
        </a>
        <sup class="sup-c" title="class">
         c

@@ -212,6 +212,11 @@
                  rdfs:comment "The relation that associates a ValueDomain with a Property" ;
                  rdfs:label "isValueDomainOf" .
 
+:hasUnit rdf:type owl:ObjectProperty ;
+                 rdfs:domain :PropertyState ;
+                 rdfs:range :Unit ;
+                 rdfs:comment "Associates a unit of measure to a value" ;
+                 rdfs:label "hasUnit" .
 
 #################################################################
 #    Data properties
@@ -243,6 +248,17 @@
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
 rdfs:Resource rdf:type owl:Class .
 
+###  https://w3id.org/digitalconstruction/Variables#Unit
+:Unit rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Unit of Measure - Aligned with qudt:Unit" ;
+      rdfs:label "Unit" .
+
+###  https://w3id.org/digitalconstruction/Variables#Unit
+:QuantityKind rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Quantity Kind - Aligned with qudt:QuantityKind" ;
+      rdfs:label "QuantityKind" .
 
 ###  https://w3id.org/digitalconstruction/Variables#ArithmeticConstraint
 :ArithmeticConstraint rdf:type owl:Class ;
