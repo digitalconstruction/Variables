@@ -119,7 +119,7 @@
 :hasObjectValue rdf:type owl:ObjectProperty ;
                 rdfs:domain :PropertyState ;
                 rdfs:range owl:Thing ;
-                rdfs:comment "" ;
+                rdfs:comment "A property value that is an object" ;
                 rdfs:label "hasObjectValue" .
 
 
@@ -218,6 +218,19 @@
                  rdfs:comment "Associates a unit of measure to a value" ;
                  rdfs:label "hasUnit" .
 
+:hasObjectValue rdf:type owl:ObjectProperty ;
+		rdfs:domain [ a owl:Class ; owl:unionOf (:Property :PropertyState :UnaryConstraint ) ];
+		rdfs:range owl:Thing ;
+		rdfs:label "hasObjectValue" ;
+		rdfs:comment "Associates an object value to a property or property state" .
+		
+:hasValue rdf:type owl:DatatypeProperty ;
+	  rdfs:domain [ a owl:Class ; owl:unionOf ( :Property :PropertyState :UnaryConstraint ) ];
+	  rdfs:range xsd:Literal ;
+	  rdfs:label "hasObjectValue" ;
+	  rdfs:comment "Associates an object value to a property or property state" .	
+		 
+
 #################################################################
 #    Data properties
 #################################################################
@@ -235,10 +248,10 @@
 
 
 ###  https://w3id.org/digitalconstruction/Variables#hasValue
-:hasValue rdf:type owl:DatatypeProperty ;
-          rdfs:domain :UnaryConstraint ;
-          rdfs:range rdfs:Literal ;
-          rdfs:label "hasValue" .
+# :hasValue rdf:type owl:DatatypeProperty ;
+#           rdfs:domain :UnaryConstraint ;
+#           rdfs:range rdfs:Literal ;
+#           rdfs:label "hasValue" .
 
 
 #################################################################

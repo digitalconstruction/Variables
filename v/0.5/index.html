@@ -802,6 +802,13 @@
        Sub-classes
       </th>
       <td>
+       <a href="#ConjunctiveConstraint">
+        ConjunctiveConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
        <a href="#DisjunctiveConstraint">
         DisjunctiveConstraint
        </a>
@@ -811,13 +818,6 @@
        <br>
        <a href="#NegatedConstraint">
         NegatedConstraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
-       <a href="#ConjunctiveConstraint">
-        ConjunctiveConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -939,8 +939,15 @@
        In domain of
       </th>
       <td>
-       <a href="#constrainsProperty1">
-        constrainsProperty1
+       <a href="#constrainsProperty3">
+        constrainsProperty3
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#constrainsProperty2">
+        constrainsProperty2
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -953,15 +960,8 @@
         op
        </sup>
        <br>
-       <a href="#constrainsProperty3">
-        constrainsProperty3
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#constrainsProperty2">
-        constrainsProperty2
+       <a href="#constrainsProperty1">
+        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1136,13 +1136,6 @@
        Sub-classes
       </th>
       <td>
-       <a href="#MinDistance">
-        MinDistance
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
        <a href="#FixedDistance">
         FixedDistance
        </a>
@@ -1152,6 +1145,13 @@
        <br>
        <a href="#MaxDistance">
         MaxDistance
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
+       <a href="#MinDistance">
+        MinDistance
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1215,13 +1215,6 @@
         c
        </sup>
        <br>
-       <a href="#UnaryConstraint">
-        UnaryConstraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br>
        <a href="#SameValues">
         SameValues
        </a>
@@ -1238,6 +1231,13 @@
        <br>
        <a href="#TernaryConstraint">
         TernaryConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br>
+       <a href="#UnaryConstraint">
+        UnaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1915,8 +1915,8 @@
        In domain of
       </th>
       <td>
-       <a href="#hasPropertyState">
-        hasPropertyState
+       <a href="#isPropertyOf">
+        isPropertyOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1929,8 +1929,8 @@
         op
        </sup>
        <br>
-       <a href="#isPropertyOf">
-        isPropertyOf
+       <a href="#hasPropertyState">
+        hasPropertyState
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2008,15 +2008,15 @@
        In domain of
       </th>
       <td>
-       <a href="#hasTimeOfValidity">
-        hasTimeOfValidity
+       <a href="#hasObjectValue">
+        hasObjectValue
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#hasObjectValue">
-        hasObjectValue
+       <a href="#hasTimeOfValidity">
+        hasTimeOfValidity
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2122,15 +2122,8 @@
         op
        </sup>
        <br>
-       <a href="#constrainsProperty">
-        constrainsProperty
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br>
-       <a href="#constrainsProperty1">
-        constrainsProperty1
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2143,8 +2136,15 @@
         op
        </sup>
        <br>
-       <a href="#isValueDomainOf">
-        isValueDomainOf
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br>
+       <a href="#constrainsProperty1">
+        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2476,20 +2476,6 @@
        <br>
       </td>
      </tr>
-     <tr>
-      <th>
-       In domain of
-      </th>
-      <td>
-       <a href="#hasValue">
-        hasValue
-       </a>
-       <sup class="sup-dp" title="datatype property">
-        dp
-       </sup>
-       <br>
-      </td>
-     </tr>
     </table>
    </div>
    <div class="entity class" id="Unit">
@@ -2604,15 +2590,15 @@
        In domain of
       </th>
       <td>
-       <a href="#hasValueType">
-        hasValueType
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br>
-       <a href="#isValueDomainOf">
-        isValueDomainOf
+       <a href="#hasValueType">
+        hasValueType
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -3147,6 +3133,7 @@
        Description
       </th>
       <td>
+       A property value that is an object
       </td>
      </tr>
      <tr>
@@ -3160,6 +3147,28 @@
        <sup class="sup-c" title="class">
         c
        </sup>
+       (
+       <a href="#Property">
+        Property
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       or
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       or
+       <a href="#UnaryConstraint">
+        UnaryConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       )
       </td>
      </tr>
      <tr>
@@ -3849,7 +3858,7 @@
     </li>
     <li>
      <a href="#hasValue">
-      hasValue
+      hasObjectValue
      </a>
     </li>
    </ul>
@@ -3921,7 +3930,7 @@
    </div>
    <div class="entity property" id="hasValue">
     <h3>
-     hasValue
+     hasObjectValue
      <sup class="sup-dp" title="datatype property">
       dp
      </sup>
@@ -3939,15 +3948,39 @@
      </tr>
      <tr>
       <th>
+       Description
+      </th>
+      <td>
+       Associates an object value to a property or property state
+      </td>
+     </tr>
+     <tr>
+      <th>
        Domain(s)
       </th>
       <td>
+       (
+       <a href="#Property">
+        Property
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       or
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       or
        <a href="#UnaryConstraint">
         UnaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
+       )
       </td>
      </tr>
      <tr>
@@ -3955,8 +3988,8 @@
        Range(s)
       </th>
       <td>
-       <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
-        rdfs:Literal
+       <a href="http://www.w3.org/2001/XMLSchema#Literal">
+        xsd:Literal
        </a>
        <sup class="sup-c" title="class">
         c
