@@ -247,7 +247,7 @@
                  rdfs:label "isValueDomainOf" .
 
 :hasUnit rdf:type owl:ObjectProperty ;
-                 rdfs:domain :PropertyState ;
+                 rdfs:domain [ a owl:Class ; owl:unionOf ( :Property :PropertyState ) ];
                  rdfs:range :Unit ;
                  rdfs:comment "Associates a unit of measure to a value" ;
                  rdfs:label "hasUnit" .
