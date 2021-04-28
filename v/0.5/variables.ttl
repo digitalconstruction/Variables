@@ -596,7 +596,7 @@ rdfs:Resource rdf:type owl:Class .
 #################################################################
 
 :Property rdfs:subClassOf rdf:Statement .
-:subject rdfs:subPropertyOf rdf:subject .
+:isPropertyOf rdfs:subPropertyOf rdf:subject .
 :isPropertyFor rdfs:subPropertyOf rdf:predicate .
 :hasObjectValue rdfs:subPropertyOf rdf:object .
 :hasValue rdfs:subPropertyOf rdf:object .
