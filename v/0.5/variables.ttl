@@ -280,6 +280,12 @@
                rdfs:domain :IntervalDomain ;
                rdfs:label "hasUpperBound" .
 
+:hasPreferenceDegree rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Constraint ;
+	       rdfs:range xsd:decimal ;
+	       rdfs:comment "Specifies that the constraint is actually a soft constraint with the specified degree of preference for holding. The preference is between [0.0, 1.0], with 0.0 meaning no preference at all and 1.0 that it is mandatory that the constraint holds" ;
+               rdfs:label "hasPreferenceDegree" .
+
 
 ###  https://w3id.org/digitalconstruction/Variables#hasValue
 # :hasValue rdf:type owl:DatatypeProperty ;
