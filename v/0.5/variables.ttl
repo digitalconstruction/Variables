@@ -113,6 +113,7 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#hasComparison
 :hasComparison rdf:type owl:ObjectProperty ;
+               rdfs:domain :QuantitativeConstraint ;
                rdfs:range :Comparison ;
                rdfs:comment "The Comparison operator of an ArithmeticConstraint. For example, in 'property1 LessThan property2' the Comparison operator is LessThan" ;
                rdfs:label "hasComparison" .
@@ -343,7 +344,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#BinaryConstraint
 :BinaryConstraint rdf:type owl:Class ;
-                  rdfs:subClassOf :QuantitativeConstraint .
+                  rdfs:subClassOf :QuantitativeConstraint ;
+                  rdfs:label "BinaryConstraint" .
 
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#Comparison
@@ -450,7 +452,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeConstraint
 :QuantitativeConstraint rdf:type owl:Class ;
-                        rdfs:subClassOf :ElementaryConstraint .
+                        rdfs:subClassOf :ElementaryConstraint ;
+                        rdfs:label "QuantitativeConstraint" .
 
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty
@@ -466,7 +469,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeState
 :QuantitativeState rdf:type owl:Class ;
-                   rdfs:subClassOf :PropertyState .
+                   rdfs:subClassOf :PropertyState ;
+                   rdfs:label "QuantitativeState" .
 
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#QuantityKind
@@ -491,7 +495,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#TernaryConstraint
 :TernaryConstraint rdf:type owl:Class ;
-                   rdfs:subClassOf :QuantitativeConstraint .
+                   rdfs:subClassOf :QuantitativeConstraint ;
+                   rdfs:label "TernaryConstraint" .
 
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#Unit
