@@ -239,7 +239,7 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#isParameterOf
 :isParameterOf rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :hasProperty ;
+               rdfs:subPropertyOf :isPropertyOf ;
                rdfs:domain :Property ;
                rdfs:range :Subject ;
                rdfs:comment "A relation to an object whose parameter (an input property or a given) this is. For example, a priceIndex is a parameter of a scenario" ;
@@ -248,7 +248,7 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#isPredictionOf
 :isPredictionOf rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :hasProperty ;
+                rdfs:subPropertyOf :isPropertyOf ;
                 rdfs:domain :Property ;
                 rdfs:range :Subject ;
                 rdfs:comment "A relation to an object whose prediction (an output property or a result) this is. For example, paybackTime is a prediction of a scenario " ;
