@@ -455,10 +455,21 @@ association of the value (
     </tt>
     ).
    </p>
-   <img src="variables-example.svg" width="40%"/>
+   <img src="variables-example.svg" width="60%"/>
    <p>
-    The classes of Digital Construction Variables ontology are aligned with QUDT, SSN/SOSA and Saref Core
-ontologies according the following figure:
+    The classes of Digital Construction Variables ontology are aligned with
+    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/QUDT/qudt-dicon.ttl">
+     QUDT
+    </a>
+    ,
+    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/SSN/ssn-dicon.ttl">
+     SSN/SOSA
+    </a>
+    and
+    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/Saref/saref-dicon.ttl">
+     Saref
+    </a>
+    ontologies according the diagram below. The full alignments are available at the separate alignment modules.
    </p>
    <img src="variables-alignments.svg" width="60%"/>
   </section>
@@ -847,8 +858,8 @@ ontologies according the following figure:
        Sub-classes
       </th>
       <td>
-       <a href="#ConjunctiveConstraint">
-        ConjunctiveConstraint
+       <a href="#NegatedConstraint">
+        NegatedConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -861,8 +872,8 @@ ontologies according the following figure:
         c
        </sup>
        <br/>
-       <a href="#NegatedConstraint">
-        NegatedConstraint
+       <a href="#ConjunctiveConstraint">
+        ConjunctiveConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -963,15 +974,15 @@ ontologies according the following figure:
        Sub-classes
       </th>
       <td>
-       <a href="#CompositeConstraint">
-        CompositeConstraint
+       <a href="#ElementaryConstraint">
+        ElementaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#ElementaryConstraint">
-        ElementaryConstraint
+       <a href="#CompositeConstraint">
+        CompositeConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -984,18 +995,18 @@ ontologies according the following figure:
        In domain of
       </th>
       <td>
-       <a href="#constrainsProperty">
-        constrainsProperty
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#hasPreferenceDegree">
         hasPreferenceDegree
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
+       </sup>
+       <br/>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
        </sup>
        <br/>
       </td>
@@ -1158,6 +1169,13 @@ ontologies according the following figure:
        Sub-classes
       </th>
       <td>
+       <a href="#DifferentValues">
+        DifferentValues
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
        <a href="#QuantitativeConstraint">
         QuantitativeConstraint
        </a>
@@ -1174,13 +1192,6 @@ ontologies according the following figure:
        <br/>
        <a href="#OneOfValues">
         OneOfValues
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="#DifferentValues">
-        DifferentValues
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1295,15 +1306,15 @@ ontologies according the following figure:
        In domain of
       </th>
       <td>
-       <a href="#hasLowerBound">
-        hasLowerBound
+       <a href="#hasUpperBound">
+        hasUpperBound
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
        </sup>
        <br/>
-       <a href="#hasUpperBound">
-        hasUpperBound
+       <a href="#hasLowerBound">
+        hasLowerBound
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
@@ -1564,15 +1575,8 @@ ontologies according the following figure:
        In domain of
       </th>
       <td>
-       <a href="#hasValueDomain">
-        hasValueDomain
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#isPropertyOf">
-        isPropertyOf
+       <a href="#hasPropertyState">
+        hasPropertyState
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1585,15 +1589,15 @@ ontologies according the following figure:
         op
        </sup>
        <br/>
-       <a href="#isParameterOf">
-        isParameterOf
+       <a href="#hasValueDomain">
+        hasValueDomain
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#isPredictionOf">
-        isPredictionOf
+       <a href="#isParameterOf">
+        isParameterOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1606,8 +1610,15 @@ ontologies according the following figure:
         op
        </sup>
        <br/>
-       <a href="#hasPropertyState">
-        hasPropertyState
+       <a href="#isPredictionOf">
+        isPredictionOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isPropertyOf">
+        isPropertyOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1620,27 +1631,6 @@ ontologies according the following figure:
        In range of
       </th>
       <td>
-       <a href="#constrainsProperty3">
-        constrainsProperty3
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#constrainsProperty">
-        constrainsProperty
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#hasParameter">
-        hasParameter
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#hasPrediction">
         hasPrediction
        </a>
@@ -1655,8 +1645,22 @@ ontologies according the following figure:
         op
        </sup>
        <br/>
-       <a href="#constrainsProperty1">
-        constrainsProperty1
+       <a href="#hasParameter">
+        hasParameter
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasProperty">
+        hasProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#constrainsProperty3">
+        constrainsProperty3
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1669,8 +1673,15 @@ ontologies according the following figure:
         op
        </sup>
        <br/>
-       <a href="#hasProperty">
-        hasProperty
+       <a href="#constrainsProperty1">
+        constrainsProperty1
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#constrainsProperty">
+        constrainsProperty
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1817,15 +1828,15 @@ ontologies according the following figure:
        In domain of
       </th>
       <td>
-       <a href="#constrainsProperty1">
-        constrainsProperty1
+       <a href="#hasComparison">
+        hasComparison
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#hasComparison">
-        hasComparison
+       <a href="#constrainsProperty1">
+        constrainsProperty1
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2085,13 +2096,6 @@ ontologies according the following figure:
        In domain of
       </th>
       <td>
-       <a href="#hasParameter">
-        hasParameter
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#hasProperty">
         hasProperty
        </a>
@@ -2101,6 +2105,13 @@ ontologies according the following figure:
        <br/>
        <a href="#hasPrediction">
         hasPrediction
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasParameter">
+        hasParameter
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2120,15 +2131,15 @@ ontologies according the following figure:
         op
        </sup>
        <br/>
-       <a href="#isPredictionOf">
-        isPredictionOf
+       <a href="#isPropertyOf">
+        isPropertyOf
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#isPropertyOf">
-        isPropertyOf
+       <a href="#isPredictionOf">
+        isPredictionOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2277,15 +2288,15 @@ ontologies according the following figure:
        Sub-classes
       </th>
       <td>
-       <a href="#EnumeratedDomain">
-        EnumeratedDomain
+       <a href="#OrderedDomain">
+        OrderedDomain
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#OrderedDomain">
-        OrderedDomain
+       <a href="#EnumeratedDomain">
+        EnumeratedDomain
        </a>
        <sup class="sup-c" title="class">
         c
