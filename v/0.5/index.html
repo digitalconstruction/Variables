@@ -458,11 +458,11 @@ association of the value (
    <img src="variables-example.svg" width="60%"/>
    <p>
     The classes of Digital Construction Variables ontology are aligned with
-    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/QUDT/qudt-dicon.ttl">
+    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/QUDT/qudt.ttl">
      QUDT
     </a>
     ,
-    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/SSN/ssn-dicon.ttl">
+    <a href="https://w3id.org/digitalconstruction/0.5/Alignment/SSN/ssn.ttl">
      SSN/SOSA
     </a>
     and
@@ -974,15 +974,15 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#ElementaryConstraint">
-        ElementaryConstraint
+       <a href="#CompositeConstraint">
+        CompositeConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#CompositeConstraint">
-        CompositeConstraint
+       <a href="#ElementaryConstraint">
+        ElementaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1016,15 +1016,15 @@ association of the value (
        In range of
       </th>
       <td>
-       <a href="#isConstrainedBy">
-        isConstrainedBy
+       <a href="#hasConstituentConstraint">
+        hasConstituentConstraint
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#hasConstituentConstraint">
-        hasConstituentConstraint
+       <a href="#isConstrainedBy">
+        isConstrainedBy
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1169,8 +1169,8 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#DifferentValues">
-        DifferentValues
+       <a href="#SameValues">
+        SameValues
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1183,8 +1183,8 @@ association of the value (
         c
        </sup>
        <br/>
-       <a href="#SameValues">
-        SameValues
+       <a href="#DifferentValues">
+        DifferentValues
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1575,29 +1575,22 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#hasPropertyState">
-        hasPropertyState
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#isPropertyFor">
-        isPropertyFor
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#hasValueDomain">
-        hasValueDomain
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#isParameterOf">
         isParameterOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isPropertyOf">
+        isPropertyOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasPropertyState">
+        hasPropertyState
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1617,8 +1610,15 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#isPropertyOf">
-        isPropertyOf
+       <a href="#isPropertyFor">
+        isPropertyFor
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasValueDomain">
+        hasValueDomain
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1631,29 +1631,8 @@ association of the value (
        In range of
       </th>
       <td>
-       <a href="#hasPrediction">
-        hasPrediction
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#constrainsProperty2">
         constrainsProperty2
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#hasParameter">
-        hasParameter
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#hasProperty">
-        hasProperty
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1673,6 +1652,13 @@ association of the value (
         op
        </sup>
        <br/>
+       <a href="#hasPrediction">
+        hasPrediction
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
        <a href="#constrainsProperty1">
         constrainsProperty1
        </a>
@@ -1680,8 +1666,22 @@ association of the value (
         op
        </sup>
        <br/>
+       <a href="#hasProperty">
+        hasProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
        <a href="#constrainsProperty">
         constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasParameter">
+        hasParameter
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1807,15 +1807,15 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#BinaryConstraint">
-        BinaryConstraint
+       <a href="#TernaryConstraint">
+        TernaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#TernaryConstraint">
-        TernaryConstraint
+       <a href="#BinaryConstraint">
+        BinaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2124,8 +2124,8 @@ association of the value (
        In range of
       </th>
       <td>
-       <a href="#isParameterOf">
-        isParameterOf
+       <a href="#isPredictionOf">
+        isPredictionOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2138,8 +2138,8 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#isPredictionOf">
-        isPredictionOf
+       <a href="#isParameterOf">
+        isParameterOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2309,15 +2309,15 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#hasValueType">
-        hasValueType
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#isValueDomainOf">
-        isValueDomainOf
+       <a href="#hasValueType">
+        hasValueType
        </a>
        <sup class="sup-op" title="object property">
         op
