@@ -111,6 +111,13 @@ rdf:subject rdf:type owl:ObjectProperty .
                      rdfs:label "constrainsProperty3" .
 
 
+###  https://w3id.org/digitalconstruction/0.5/Variables#dependsOnProperty
+:dependsOnProperty rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Property ;
+                   rdfs:range :Property ;
+                   rdfs:label "dependsOnProperty" .
+
+
 ###  https://w3id.org/digitalconstruction/0.5/Variables#hasComparison
 :hasComparison rdf:type owl:ObjectProperty ;
                rdfs:domain :QuantitativeConstraint ;
