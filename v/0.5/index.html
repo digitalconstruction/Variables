@@ -589,18 +589,8 @@ association of the value (
      </a>
     </li>
     <li>
-     <a href="#Resource">
-      Resource
-     </a>
-    </li>
-    <li>
      <a href="#SameValues">
       SameValues
-     </a>
-    </li>
-    <li>
-     <a href="#Statement">
-      Statement
      </a>
     </li>
     <li>
@@ -658,60 +648,6 @@ association of the value (
      </tr>
     </table>
    </div>
-   <div class="entity class" id="Statement">
-    <h3>
-     Statement
-     <sup class="sup-c" title="class">
-      c
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Sub-classes
-      </th>
-      <td>
-       <a href="#Property1">
-        Property
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity class" id="Resource">
-    <h3>
-     Resource
-     <sup class="sup-c" title="class">
-      c
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        http://www.w3.org/2000/01/rdf-schema#Resource
-       </code>
-      </td>
-     </tr>
-    </table>
-   </div>
    <div class="entity class" id="BinaryConstraint">
     <h3>
      BinaryConstraint
@@ -749,15 +685,15 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#constrainsProperty2">
-        constrainsProperty2
+       <a href="#hasOperator">
+        hasOperator
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#hasOperator">
-        hasOperator
+       <a href="#constrainsProperty2">
+        constrainsProperty2
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -858,6 +794,13 @@ association of the value (
        Sub-classes
       </th>
       <td>
+       <a href="#NegatedConstraint">
+        NegatedConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
        <a href="#DisjunctiveConstraint">
         DisjunctiveConstraint
        </a>
@@ -867,13 +810,6 @@ association of the value (
        <br/>
        <a href="#ConjunctiveConstraint">
         ConjunctiveConstraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="#NegatedConstraint">
-        NegatedConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -974,15 +910,15 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#ElementaryConstraint">
-        ElementaryConstraint
+       <a href="#CompositeConstraint">
+        CompositeConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#CompositeConstraint">
-        CompositeConstraint
+       <a href="#ElementaryConstraint">
+        ElementaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -995,18 +931,18 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#constrainsProperty">
-        constrainsProperty
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#hasPreferenceDegree">
         hasPreferenceDegree
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
+       </sup>
+       <br/>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
        </sup>
        <br/>
       </td>
@@ -1016,15 +952,15 @@ association of the value (
        In range of
       </th>
       <td>
-       <a href="#hasConstituentConstraint">
-        hasConstituentConstraint
+       <a href="#isConstrainedBy">
+        isConstrainedBy
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#isConstrainedBy">
-        isConstrainedBy
+       <a href="#hasConstituentConstraint">
+        hasConstituentConstraint
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1169,20 +1105,6 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#OneOfValues">
-        OneOfValues
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="#DifferentValues">
-        DifferentValues
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="#SameValues">
         SameValues
        </a>
@@ -1192,6 +1114,20 @@ association of the value (
        <br/>
        <a href="#QuantitativeConstraint">
         QuantitativeConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#OneOfValues">
+        OneOfValues
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="#DifferentValues">
+        DifferentValues
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1544,20 +1480,6 @@ association of the value (
      </tr>
      <tr>
       <th>
-       Super-classes
-      </th>
-      <td>
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
-        rdf:Statement
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-      </td>
-     </tr>
-     <tr>
-      <th>
        Sub-classes
       </th>
       <td>
@@ -1575,6 +1497,34 @@ association of the value (
        In domain of
       </th>
       <td>
+       <a href="#dependsOnProperty">
+        dependsOnProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isPredictionOf">
+        isPredictionOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isConstrainedBy">
+        isConstrainedBy
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasValueDomain">
+        hasValueDomain
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
        <a href="#isParameterOf">
         isParameterOf
        </a>
@@ -1589,36 +1539,8 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#hasValueDomain">
-        hasValueDomain
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#isPredictionOf">
-        isPredictionOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#isPropertyFor">
         isPropertyFor
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#dependsOnProperty">
-        dependsOnProperty
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#isConstrainedBy">
-        isConstrainedBy
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1638,22 +1560,8 @@ association of the value (
        In range of
       </th>
       <td>
-       <a href="#hasPrediction">
-        hasPrediction
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#constrainsProperty3">
-        constrainsProperty3
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
-       <a href="#dependsOnProperty">
-        dependsOnProperty
+       <a href="#hasProperty">
+        hasProperty
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1666,13 +1574,6 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#isValueDomainOf">
-        isValueDomainOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <br/>
        <a href="#hasParameter">
         hasParameter
        </a>
@@ -1680,8 +1581,29 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#hasProperty">
-        hasProperty
+       <a href="#dependsOnProperty">
+        dependsOnProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#constrainsProperty3">
+        constrainsProperty3
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#constrainsProperty">
+        constrainsProperty
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasPrediction">
+        hasPrediction
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1694,8 +1616,8 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#constrainsProperty">
-        constrainsProperty
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -1752,15 +1674,15 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#hasTimeOfCreation">
-        hasTimeOfCreation
+       <a href="#hasTimeOfValidity">
+        hasTimeOfValidity
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
        </sup>
        <br/>
-       <a href="#hasTimeOfValidity">
-        hasTimeOfValidity
+       <a href="#hasTimeOfCreation">
+        hasTimeOfCreation
        </a>
        <sup class="sup-dp" title="datatype property">
         dp
@@ -1821,15 +1743,15 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#TernaryConstraint">
-        TernaryConstraint
+       <a href="#BinaryConstraint">
+        BinaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#BinaryConstraint">
-        BinaryConstraint
+       <a href="#TernaryConstraint">
+        TernaryConstraint
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2110,15 +2032,15 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#hasParameter">
-        hasParameter
+       <a href="#hasProperty">
+        hasProperty
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#hasProperty">
-        hasProperty
+       <a href="#hasParameter">
+        hasParameter
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2138,8 +2060,8 @@ association of the value (
        In range of
       </th>
       <td>
-       <a href="#isPropertyOf">
-        isPropertyOf
+       <a href="#isParameterOf">
+        isParameterOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2152,8 +2074,8 @@ association of the value (
         op
        </sup>
        <br/>
-       <a href="#isParameterOf">
-        isParameterOf
+       <a href="#isPropertyOf">
+        isPropertyOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2302,15 +2224,15 @@ association of the value (
        Sub-classes
       </th>
       <td>
-       <a href="#OrderedDomain">
-        OrderedDomain
+       <a href="#EnumeratedDomain">
+        EnumeratedDomain
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="#EnumeratedDomain">
-        EnumeratedDomain
+       <a href="#OrderedDomain">
+        OrderedDomain
        </a>
        <sup class="sup-c" title="class">
         c
@@ -2323,15 +2245,15 @@ association of the value (
        In domain of
       </th>
       <td>
-       <a href="#isValueDomainOf">
-        isValueDomainOf
+       <a href="#hasValueType">
+        hasValueType
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="#hasValueType">
-        hasValueType
+       <a href="#isValueDomainOf">
+        isValueDomainOf
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -2366,21 +2288,6 @@ association of the value (
     </span>
    </h2>
    <ul class="hlist">
-    <li>
-     <a href="#object">
-      object
-     </a>
-    </li>
-    <li>
-     <a href="#predicate">
-      predicate
-     </a>
-    </li>
-    <li>
-     <a href="#subject">
-      subject
-     </a>
-    </li>
     <li>
      <a href="#constrainsProperty">
       constrainsProperty
@@ -2462,11 +2369,6 @@ association of the value (
      </a>
     </li>
     <li>
-     <a href="#hasValue">
-      hasValue
-     </a>
-    </li>
-    <li>
      <a href="#hasValueDomain">
       hasValueDomain
      </a>
@@ -2507,66 +2409,6 @@ association of the value (
      </a>
     </li>
    </ul>
-   <div class="entity property" id="object">
-    <h3>
-     object
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        http://www.w3.org/1999/02/22-rdf-syntax-ns#object
-       </code>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="predicate">
-    <h3>
-     predicate
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
-       </code>
-      </td>
-     </tr>
-    </table>
-   </div>
-   <div class="entity property" id="subject">
-    <h3>
-     subject
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        http://www.w3.org/1999/02/22-rdf-syntax-ns#subject
-       </code>
-      </td>
-     </tr>
-    </table>
-   </div>
    <div class="entity property" id="constrainsProperty">
     <h3>
      constrainsProperty
@@ -3013,19 +2855,6 @@ association of the value (
       </th>
       <td>
        Associates an object value (owl:Thing) to a property or property state
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">
-        rdf:object
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
       </td>
      </tr>
      <tr>
@@ -3504,89 +3333,6 @@ association of the value (
      </tr>
     </table>
    </div>
-   <div class="entity property" id="hasValue">
-    <h3>
-     hasValue
-     <sup class="sup-op" title="object property">
-      op
-     </sup>
-    </h3>
-    <table>
-     <tr>
-      <th>
-       URI
-      </th>
-      <td>
-       <code>
-        https://w3id.org/digitalconstruction/0.5/Variables#hasValue
-       </code>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Description
-      </th>
-      <td>
-       Associates an data value (rdfs:Literal) to a property or property state
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">
-        rdf:object
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Domain(s)
-      </th>
-      <td>
-       (
-       <a href="#Property1">
-        Property
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       or
-       <a href="#PropertyState">
-        PropertyState
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       or
-       <a href="#QuantitativeConstraint">
-        QuantitativeConstraint
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       )
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Range(s)
-      </th>
-      <td>
-       <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
-        rdfs:Literal
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-      </td>
-     </tr>
-    </table>
-   </div>
    <div class="entity property" id="hasValueDomain">
     <h3>
      hasValueDomain
@@ -3903,19 +3649,6 @@ association of the value (
      </tr>
      <tr>
       <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">
-        rdf:predicate
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-      </td>
-     </tr>
-     <tr>
-      <th>
        Domain(s)
       </th>
       <td>
@@ -3966,19 +3699,6 @@ association of the value (
       </th>
       <td>
        Associates the Property to the thing whose property it is
-      </td>
-     </tr>
-     <tr>
-      <th>
-       Super-properties
-      </th>
-      <td>
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">
-        rdf:subject
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
       </td>
      </tr>
      <tr>
@@ -4097,6 +3817,11 @@ association of the value (
     <li>
      <a href="#hasUpperBound">
       hasUpperBound
+     </a>
+    </li>
+    <li>
+     <a href="#hasValue">
+      hasValue
      </a>
     </li>
    </ul>
@@ -4320,6 +4045,76 @@ association of the value (
       <td>
        <a href="#IntervalDomain">
         IntervalDomain
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasValue">
+    <h3>
+     hasValue
+     <sup class="sup-dp" title="datatype property">
+      dp
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Variables#hasValue
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Associates a data value to a Property, a PropertyState, or a QuantitativeConstraint
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       (
+       <a href="#Property1">
+        Property
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       or
+       <a href="#PropertyState">
+        PropertyState
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       or
+       <a href="#QuantitativeConstraint">
+        QuantitativeConstraint
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       )
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Literal">
+        rdfs:Literal
        </a>
        <sup class="sup-c" title="class">
         c

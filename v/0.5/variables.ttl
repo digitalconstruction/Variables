@@ -63,18 +63,6 @@
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#object
-rdf:object rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
-rdf:predicate rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#subject
-rdf:subject rdf:type owl:ObjectProperty .
-
-
 ###  https://w3id.org/digitalconstruction/0.5/Variables#constrainsProperty
 :constrainsProperty rdf:type owl:ObjectProperty ;
                     owl:inverseOf :isConstrainedBy ;
@@ -136,7 +124,6 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#hasObjectValue
 :hasObjectValue rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf rdf:object ;
                 rdfs:range owl:Thing ;
                 rdfs:comment "Associates an object value (owl:Thing) to a property or property state" ;
                 rdfs:label "hasObjectValue" .
@@ -210,17 +197,6 @@ rdf:subject rdf:type owl:ObjectProperty .
          rdfs:label "hasUnit" .
 
 
-###  https://w3id.org/digitalconstruction/0.5/Variables#hasValue
-:hasValue rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf rdf:object ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :Property
-                                      :PropertyState
-                                      :QuantitativeConstraint
-                                    )
-                      ] .
-
-
 ###  https://w3id.org/digitalconstruction/0.5/Variables#hasValueDomain
 :hasValueDomain rdf:type owl:ObjectProperty ;
                 owl:inverseOf :isValueDomainOf ;
@@ -264,7 +240,6 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#isPropertyFor
 :isPropertyFor rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf rdf:predicate ;
                rdfs:domain :Property ;
                rdfs:range rdf:Property ;
                rdfs:comment "Associates a Property object to the owl:ObjectProperty or owl:DatatypeProperty that it objectifies" ;
@@ -273,7 +248,6 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#isPropertyOf
 :isPropertyOf rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf rdf:subject ;
               rdfs:domain :Property ;
               rdfs:range :Subject ;
               rdfs:comment "Associates the Property to the thing whose property it is" ;
@@ -330,7 +304,15 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#hasValue
 :hasValue rdf:type owl:DatatypeProperty ;
-          rdfs:range rdfs:Literal .
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Property
+                                      :PropertyState
+                                      :QuantitativeConstraint
+                                    )
+                      ] ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "Associates a data value to a Property, a PropertyState, or a QuantitativeConstraint" ;
+          rdfs:label "hasValue" .
 
 
 #################################################################
@@ -339,15 +321,6 @@ rdf:subject rdf:type owl:ObjectProperty .
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 rdf:Property rdf:type owl:Class .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
-rdf:Statement rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
-
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#BinaryConstraint
 :BinaryConstraint rdf:type owl:Class ;
@@ -446,7 +419,6 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://w3id.org/digitalconstruction/0.5/Variables#Property
 :Property rdf:type owl:Class ;
-          rdfs:subClassOf rdf:Statement ;
           rdfs:comment "An objectified property" ;
           rdfs:label "Property" .
 
@@ -561,14 +533,6 @@ rdfs:Resource rdf:type owl:Class .
 ###  https://w3id.org/digitalconstruction/0.5/Variables#Times
 :Times rdf:type owl:NamedIndividual ,
                 :Operator .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:hasValue rdfs:comment "Associates an data value (rdfs:Literal) to a property or property state" ;
-          rdfs:label "hasValue" .
 
 
 #################################################################

@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dicv: <https://w3id.org/digitalconstruction/0.5/Variables#> .
+
+<https://w3id.org/digitalconstruction/0.5/Alignment/dicv/dicv-rdf.ttl>
+  rdf:type owl:Ontology ;
+  dcterms:created "2022-01-15"^^xsd:date ;
+  dcterms:creator "Seppo Törma" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "Alignment of the Digital Construction Variables ontology with RDF reification terminology" ;
+  rdfs:label "Alignment of DICV and RDF reification terminology"@en ;
+  owl:imports <https://digitalconstruction.github.io/Variables/v/0.5/variables.ttl>  .
+
+dicv:Property       rdfs:subClassOf    rdf:Statement .
+
+dicv::isPropertyOf  rdfs:subPropertyOf rdf:subject .
+dicv:isPropertyFor  rdfs:subPropertyOf rdf:predicate .
+dicv:hasValue       rdfs:subPropertyOf rdf:object .
+dicv:hasObjectValue rdfs:subPropertyOf rdf:object .
